@@ -1,0 +1,17 @@
+php artisan infyom:scaffold User --fromTable --tableName=users
+php artisan infyom:scaffold Slider --fromTable --tableName=sliders
+php artisan infyom:scaffold Task --fromTable --tableName=tasks
+php artisan infyom:scaffold Partner --fromTable --tableName=partners
+php artisan infyom:scaffold About --fromTable --tableName=abouts
+php artisan infyom:scaffold Position --fromTable --tableName=positions
+php artisan infyom:scaffold Team --fromTable --tableName=teams
+php artisan infyom:scaffold PositionTeam --fromTable --tableName=position_teams
+php artisan infyom:scaffold News --fromTable --tableName=news
+php artisan infyom:scaffold Magazine --fromTable --tableName=magazines
+php artisan infyom:scaffold Event --fromTable --tableName=events
+php artisan infyom:scaffold CategoryDocument --fromTable --tableName=categorydocument
+php artisan infyom:scaffold Document --fromTable --tableName=documents
+php artisan infyom:scaffold CategoryDocumentRel --fromTable --tableName=category_documents
+php artisan infyom:scaffold Contact --fromTable --tableName=contacts
+php artisan infyom:scaffold AboutUs --fromTable --tableName=about_us
+
