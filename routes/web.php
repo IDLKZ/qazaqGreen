@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 /*
@@ -20,11 +21,19 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function() {
-    Route::get('/', function () {return view('welcome');});
-
-
+    Route::get('/', [FrontController::class, 'index'])->name('main');
+    Route::group(['prefix' => 'about'], function(){
+        Route::get('/vie', [FrontController::class, 'vie'])->name('vie');
+        Route::get('/law', [FrontController::class, 'law'])->name('law');
+        Route::get('/material', [FrontController::class, 'material'])->name('material');
     });
-
+    Route::get('about-association', [FrontController::class, 'aboutAssociation'])->name('aboutAssociation');
+    Route::group(['prefix' => 'associations-new'], function(){
+        Route::get('/news', [FrontController::class, 'news'])->name('front-news');
+        Route::get('/smi', [FrontController::class, 'smi'])->name('front-smi');
+        Route::get('/event', [FrontController::class, 'event'])->name('front-event');
+    });
+});
 
 Auth::routes(["register"=>false]);
 Route::group(["middleware"=>"auth"],function (){

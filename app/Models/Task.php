@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Language;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,7 +22,7 @@ class Task extends Model
     //use SoftDeletes;
 
     use HasFactory;
-
+    use Language;
     public $table = 'tasks';
 
     const CREATED_AT = 'created_at';

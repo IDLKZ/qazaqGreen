@@ -97,7 +97,7 @@ class Event extends Model
      * @var array
      */
     public static $rules = [
-        'image' => 'required|string|max:255',
+        'image' => 'required|image',
         'slug' => 'string|max:255',
         'title_ru' => 'required|string|max:255',
         'title_kz' => 'nullable|string|max:255',

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Language;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,6 +23,7 @@ class AboutUs extends Model
     //use SoftDeletes;
 
     use HasFactory;
+    Use Language;
 
     public $table = 'about_us';
 

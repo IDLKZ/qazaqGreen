@@ -13,6 +13,11 @@ trait Language
         return $this["title_" . LaravelLocalization::getCurrentLocale()];
     }
 
+    public function getSourceAttribute()
+    {
+        return $this["source_" . LaravelLocalization::getCurrentLocale()];
+    }
+
     public function getDescriptionAttribute()
     {
         return $this["description_" . LaravelLocalization::getCurrentLocale()];

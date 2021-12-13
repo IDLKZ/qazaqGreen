@@ -1,0 +1,24 @@
+@media only screen and (max-width: 992px) {
+    nav {
+        height: 100%!important;
+    }
+}@media only screen and (max-width: 500px) {
+    .my-col {
+        flex: none;
+    }
+    .active:before {
+        display: none;
+    }
+    .active:after {
+        content: '';
+        height: 100%;
+        width: 4px;
+        color: #FECE0E;
+        background-color: #FECE0E;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .carousel-btn {top: calc(100vh*0.35);}
+    .crs-title {top: calc(100vh*0.4);}
+}

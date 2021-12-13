@@ -1,0 +1,165 @@
+html,body {
+    font-family: 'Montserrat', sans-serif!important;
+}
+.pagination {justify-content: center;}
+.my-btn-outline-info {
+    color: #1A87A7;
+    border: 1px solid #1A87A7;
+}
+.my-container {
+    padding-left: var(--bs-gutter-x,5rem)!important;
+    padding-right: var(--bs-gutter-x,5rem)!important;
+}
+.my-col {
+    flex: 1 0 0%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0%;
+}
+h4 {color: #4E5053;font-weight: 600}
+nav {
+    background-color: white!important;
+    height: 110px;
+}
+nav a {cursor: pointer}
+.nav-item ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 100;
+}
+.nav-item ul li {list-style: none}
+.nav-item:hover ul{
+    display: block;
+}
+.active:before {
+    content: '';
+    height: 4px;
+    width: 90%;
+    color: #FECE0E;
+    background-color: #FECE0E;
+    position: absolute;
+    top: 0;
+}
+#carousel {position: relative}
+.carousel-btn {
+    position: absolute;
+    top: calc(100vh*0.4);
+    left: calc(100vw*0.2);
+    z-index: 100;
+}
+.carousel-btn a {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.crs-title {
+    position: absolute;
+    width: calc(100vw*0.5);
+    left: calc(100vw*0.2);
+    top: calc(100vh*0.5);
+    color: white;
+}
+#carousel > .swiper {
+    height: 600px;
+}
+#activity, #management, #association {
+    position: relative;
+    background-color: #F2F2F2;
+}
+.act-block div:nth-child(1){
+    color: #C2C2C2;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.act-block div:nth-child(2){
+    font-weight: 600;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.act-block{z-index: 100;margin-bottom: 15px;}
+#activity img, #association img {
+    position: absolute;
+    right: 0;
+    top: calc(100vh*0.15);
+}
+#management img {
+    position: absolute;
+    left: 0;
+    top: calc(100vh*0.15);
+}
+#partners a, #management a, #journal a {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.swiper-in-slide {
+    width: 160px;
+    height: 75px;
+}
+.management-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.swiper-in-journal {
+    width: 200px;
+    height: 240px;
+}
+.association-block div:nth-child(1){
+    color: #C2C2C2;
+    font-weight: 700;
+
+    font-size: 32px;
+    padding: 0 20px;
+}
+.association-block div:nth-child(2){
+    font-weight: 600;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.association-block{z-index: 100;margin-bottom: 15px;}
+footer {background-color: #4F5054; padding: 50px 0}
+
+
+.under-title:after {
+    content: '';
+    height: 4px;
+    background-color: #1A87A7;
+    width: 80px;
+    display: block;
+    margin-top: 7px;
+}
+.document{display: flex;}
+.document div:first-child {
+    padding-left: 10px;
+    border: 1px solid #D1D1D1;
+}
+.document div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #D1D1D1;
+    background-color: #F2F2F2;
+    font-size: 40px;
+}
+.news-img {
+    width: 100%;
+    height: 170px;
+}
+.news-title {
+    font-weight: 700;
+}
