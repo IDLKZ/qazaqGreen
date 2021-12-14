@@ -49,14 +49,14 @@
                     <ul id="target_news">
                         <li class="nav-item"><a href="{{route('front-news')}}" class="nav-link">{{__('front.menu_news_new')}}</a></li>
                         <li class="nav-item"><a href="{{route('front-smi')}}" class="nav-link">{{__('front.menu_news_smi')}}</a></li>
-                        <li class="nav-item"><a href="{{route('front-event')}}" class="nav-link">{{__('front.menu_event')}}</a></li>
+{{--                        <li class="nav-item"><a href="{{route('front-event')}}" class="nav-link">{{__('front.menu_event')}}</a></li>--}}
                     </ul>
                 </li>
                 <li class="nav-item position-relative">
                     <a class="nav-link">{{__('front.menu_press')}}</a>
                 </li>
                 <li class="nav-item position-relative">
-                    <a class="nav-link">Анонс</a>
+                    <a href="{{route('front-event')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/event') ? 'active' : '' }}">Анонс</a>
                 </li>
                 <li class="nav-item position-relative">
                     <a class="nav-link">{{__('front.menu_contact')}}</a>

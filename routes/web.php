@@ -31,8 +31,8 @@ Route::group(
     Route::group(['prefix' => 'associations-new'], function(){
         Route::get('/news', [FrontController::class, 'news'])->name('front-news');
         Route::get('/smi', [FrontController::class, 'smi'])->name('front-smi');
-        Route::get('/event', [FrontController::class, 'event'])->name('front-event');
     });
+    Route::get('/event', [FrontController::class, 'event'])->name('front-event');
 });
 
 Auth::routes(["register"=>false]);
