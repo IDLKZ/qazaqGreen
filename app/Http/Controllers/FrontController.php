@@ -60,6 +60,18 @@ class FrontController extends Controller
         return view('news', compact('news'));
     }
 
+    public function singleNew($slug)
+    {
+        $new = News::where('slug', $slug)->first();
+        return view('single-new', compact('new'));
+    }
+
+    public function singleEvent($slug)
+    {
+        $new = Event::where('slug', $slug)->first();
+        return view('single-event', compact('new'));
+    }
+
     public function smi()
     {
         $news = AboutUs::paginate(8);

@@ -13,7 +13,7 @@
                         <div class="news-img" style='background: url("{{$new->getFile('image')}}") no-repeat center; background-size: cover'></div>
 
                         <div class="news-title my-3">
-                            {{\Illuminate\Support\Str::limit($new->title, 50)}}
+                            <a href="{{route('front-single-event', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>
                         </div>
 
                         <div>Опубликовано: {{$new->created_at->diffForHumans()}}</div>

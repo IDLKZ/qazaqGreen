@@ -30,9 +30,11 @@ Route::group(
     Route::get('about-association', [FrontController::class, 'aboutAssociation'])->name('aboutAssociation');
     Route::group(['prefix' => 'associations-new'], function(){
         Route::get('/news', [FrontController::class, 'news'])->name('front-news');
+        Route::get('/single-new/{slug}', [FrontController::class, 'singleNew'])->name('front-single-new');
         Route::get('/smi', [FrontController::class, 'smi'])->name('front-smi');
     });
     Route::get('/event', [FrontController::class, 'event'])->name('front-event');
+    Route::get('/event/{slug}', [FrontController::class, 'singleEvent'])->name('front-single-event');
 });
 
 Auth::routes(["register"=>false]);
