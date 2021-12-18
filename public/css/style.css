@@ -22,7 +22,7 @@ nav {
     background-color: white!important;
     height: 110px;
 }
-nav a {cursor: pointer}
+nav a {cursor: pointer;font-weight: 600;color: black!important;}
 .nav-item {margin-right: 10px}
 .nav-item ul {
     display: none;
