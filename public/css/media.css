@@ -19,6 +19,6 @@
         top: 0;
         right: 0;
     }
-    .carousel-btn {top: calc(100vh*0.35);}
-    .crs-title {top: calc(100vh*0.4);}
+    .carousel-btn {top: calc(100vh*0.3);}
+    .crs-title {top: calc(100vh*0.35);}
 }

@@ -16,7 +16,7 @@
                             <a href="{{route('front-single-event', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>
                         </div>
 
-                        <div>Опубликовано: {{$new->created_at->diffForHumans()}}</div>
+                        <div>Опубликовано: {{$new->created_at->format('d-m-Y')}}</div>
 
                         <div class="news-description my-3">
                             {!! \Illuminate\Support\Str::limit($new->description, 140) !!}

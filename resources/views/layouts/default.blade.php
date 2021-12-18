@@ -37,7 +37,7 @@
                     <a href="{{route('aboutAssociation')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/about-association') ? 'active' : '' }}">{{__('front.menu_about')}}</a>
                 </li>
                 <li class="nav-item position-relative">
-                    <a id="menu_vek" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/about/*') ? 'active' : '' }}">{!! __('front.menu_vek') !!}</a>
+                    <a id="menu_vek" class="nav-link dropdown-toggle {{ Request::is(LaravelLocalization::getCurrentLocale().'/about/*') ? 'active' : '' }}">{!! __('front.menu_vek') !!}</a>
                     <ul id="target_vek">
                         <li class="nav-item"><a href="{{route('vie')}}" class="nav-link">{{__('front.menu_vek_about')}}</a></li>
                         <li class="nav-item"><a href="{{route('law')}}" class="nav-link">{{__('front.menu_vek_law')}}</a></li>
@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="nav-item position-relative">
-                    <a id="menu_news" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/associations-new/*') ? 'active' : '' }}">{!! __('front.menu_news') !!}</a>
+                    <a id="menu_news" class="nav-link dropdown-toggle {{ Request::is(LaravelLocalization::getCurrentLocale().'/associations-new/*') ? 'active' : '' }}">{!! __('front.menu_news') !!}</a>
                     <ul id="target_news">
                         <li class="nav-item"><a href="{{route('front-news')}}" class="nav-link">{{__('front.menu_news_new')}}</a></li>
                         <li class="nav-item"><a href="{{route('front-smi')}}" class="nav-link">{{__('front.menu_news_smi')}}</a></li>
@@ -206,6 +206,17 @@
             prevEl: '.previous3',
         },
     });
+
+    // $(document).click(function () {
+        // if($(".navbar-collapse").hasClass("in")){
+        // $('.navbar-collapse').collapse('hide');
+        // }
+        $('.navbar-nav li a').on('click', function(){
+            if(!$( this ).hasClass('dropdown-toggle')){
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
+    // });
 </script>
 
 </body>

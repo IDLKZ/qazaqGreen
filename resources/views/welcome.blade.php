@@ -4,8 +4,8 @@
     <section id="carousel">
         <!-- If we need navigation buttons -->
         <div class="d-flex carousel-btn">
-            <span class="me-2"><a class="button-previous">&#10094;</a></span>
-            <span class="ms-2"><a class="button-next">&#10095;</a></span>
+            <span class="me-2"><a class="button-previous text-white">&#10094;</a></span>
+            <span class="ms-2"><a class="button-next text-white">&#10095;</a></span>
         </div>
         <!-- Slider main container -->
         <div class="swiper crs">
@@ -91,7 +91,7 @@
                 @endif
             </div>
             <div class="d-flex justify-content-center">
-                <button class="btn my-btn-outline-info mx-auto p-3">Подробнее об Ассоциации</button>
+                <a href="{{route('aboutAssociation')}}" class="btn my-btn-outline-info mx-auto p-3">Подробнее об Ассоциации</a>
             </div>
         </div>
         <img src="images/right_logo.png" class="my-auto" alt="Right Logo">
@@ -103,7 +103,7 @@
         <div class="container my-container">
             <div class="d-flex">
                 <h4>{{__('front.partners')}}</h4>
-                <div class="ms-5 d-flex">
+                <div class="ms-md-5 d-flex">
                     <span class="me-2"><a class="previous">&#10094;</a></span>
                     <span class="ms-2"><a class="next">&#10095;</a></span>
                 </div>
@@ -147,8 +147,8 @@
     <section id="management" class="py-5">
         <div class="container my-container">
             <div class="d-flex">
-                <h4>{{__('front.management')}}</h4>
-                <div class="ms-5 d-flex">
+                <h4 class="me-2">{{__('front.management')}}</h4>
+                <div class="ms-md-5 d-flex">
                     <span class="me-2"><a class="previous2">&#10094;</a></span>
                     <span class="ms-2"><a class="next2">&#10095;</a></span>
                 </div>
@@ -223,7 +223,7 @@
         <div class="container my-container">
             <div class="d-flex">
                 <h4>{{__('front.journal')}}</h4>
-                <div class="ms-5 d-flex">
+                <div class="ms-md-5 d-flex">
                     <span class="me-2"><a class="previous3">&#10094;</a></span>
                     <span class="ms-2"><a class="next3">&#10095;</a></span>
                 </div>

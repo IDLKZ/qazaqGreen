@@ -4,8 +4,8 @@
     <section id="carousel">
         <!-- If we need navigation buttons -->
         <div class="d-flex carousel-btn">
-            <span class="me-2"><a class="button-previous">&#10094;</a></span>
-            <span class="ms-2"><a class="button-next">&#10095;</a></span>
+            <span class="me-2"><a class="button-previous text-white">&#10094;</a></span>
+            <span class="ms-2"><a class="button-next text-white">&#10095;</a></span>
         </div>
         <!-- Slider main container -->
         <div class="swiper crs">
