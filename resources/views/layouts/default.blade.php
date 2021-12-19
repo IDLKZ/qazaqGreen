@@ -22,13 +22,14 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand d-flex" href="#">
-            <img src="images/logo.png" alt="Qazaq Green Logo">
-            <img src="images/slogan.png" alt="Qazaq Green Slogan">
+            <div style='background: url("images/spaq_logo_RU.png") no-repeat center;background-size: contain;width: 180px;height: 72px'></div>
+{{--            <img src="images/spaq_logo_RU.png" alt="Qazaq Green Logo">--}}
+{{--            <img src="images/slogan.png" alt="Qazaq Green Slogan">--}}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse align-items-start" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item position-relative">
                     <a class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale()) ? 'active' : '' }}" href="{{route('main')}}">{{__('front.menu_main')}}</a>
