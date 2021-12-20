@@ -19,7 +19,7 @@ return [
     'management' => 'Management',
     'journal' => 'Journal of the Association',
     'join_to_association' => 'Join the association',
-    'join_message_1' => 'Study the internal documents of the Qazaq Green Renewable Energy Association and fill out the Membership Application form.',
+    'join_message_1' => 'Study the internal <a href="/about/law">documents</a> of the Qazaq Green Renewable Energy Association and fill out the Membership Application form.',
     'join_message_2' => 'Send an Application signed by an authorized person to Info@spaq.kz .',
     'join_message_3' => 'Receive notification of the decision of the Board of Directors of the Renewable Energy Association "Qazaq Green".',
 

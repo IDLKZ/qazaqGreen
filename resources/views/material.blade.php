@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 @endpush
 @section('content')
-    <div class="container">
+    <div class="container py-5" style="height: calc(100vh*0.7)">
         <div class="under-title">
             <h1>Материалы</h1>
         </div>

@@ -22,9 +22,9 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand d-flex" href="#">
-            <div style='background: url("images/spaq_logo_RU.png") no-repeat center;background-size: contain;width: 180px;height: 72px'></div>
-{{--            <img src="images/spaq_logo_RU.png" alt="Qazaq Green Logo">--}}
-{{--            <img src="images/slogan.png" alt="Qazaq Green Slogan">--}}
+{{--            <div style='background: url("images/spaq_logo_RU.png") no-repeat center;background-size: contain;width: 180px;height: 72px'></div>--}}
+            <img src="{{asset('images/logo.png')}}" alt="Qazaq Green Logo">
+            <img src="{{asset('images/slogan.png')}}" alt="Qazaq Green Slogan">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

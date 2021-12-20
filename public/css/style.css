@@ -1,5 +1,5 @@
 html,body {
-    font-family: 'Montserrat', sans-serif!important;
+    font-family: 'Montserrat', inherit!important;
 }
 .pagination {justify-content: center;}
 .my-btn-outline-info {
@@ -22,7 +22,7 @@ nav {
     background-color: white!important;
     height: 110px;
 }
-nav a {cursor: pointer;font-weight: 600;color: black!important;}
+nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
 .nav-item {margin-right: 10px}
 .nav-item ul {
     display: none;
@@ -135,7 +135,7 @@ nav a {cursor: pointer;font-weight: 600;color: black!important;}
     font-size: 14px;
 }
 .association-block{z-index: 100;margin-bottom: 15px;position: relative}
-footer {background-color: #4F5054; padding: 50px 0;}
+footer {background-color: #4F5054; padding: 50px 0;font-weight: 600}
 
 
 .under-title:after {

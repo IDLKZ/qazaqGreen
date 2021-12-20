@@ -20,7 +20,7 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = News::latest()->take(3)->get();
         $tasks = Task::all();
         $partners = Partner::all();
         $teams = PositionTeam::with('team')->where('position_id', 1)->get();

@@ -2,7 +2,8 @@
     nav {
         height: 100%!important;
     }
-}@media only screen and (max-width: 500px) {
+}
+@media only screen and (max-width: 500px) {
     .my-col {
         flex: none;
     }
@@ -21,4 +22,8 @@
     }
     .carousel-btn {top: calc(100vh*0.3);}
     .crs-title {top: calc(100vh*0.35);}
+}
+@media only screen and (min-width: 1920px){
+    .carousel-btn {top: calc(100vh*0.4);}
+    .crs-title {top: calc(100vh*0.45);}
 }

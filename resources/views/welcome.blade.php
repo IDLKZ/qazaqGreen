@@ -15,8 +15,10 @@
                     <!-- Slides -->
                         @foreach($sliders as $slider)
                             <div class="swiper-slide position-relative">
-                                <img src="{{$slider->getFile('image')}}">
-                                <h2 class="crs-title">{{$slider->title}}</h2>
+                                <img src="{{$slider->getFile('image')}}" style="width: 100%">
+                                <h2 class="crs-title">
+                                    <a class="text-white" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
+                                </h2>
                             </div>
                         @endforeach
                     @else
@@ -287,7 +289,7 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="d-flex association-block">
                         <div>1</div>
-                        <div>{{__('front.join_message_1')}}</div>
+                        <div>{!! __('front.join_message_1') !!}</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
