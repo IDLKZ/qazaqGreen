@@ -12,7 +12,7 @@
             {!! $info->description !!}
         </div>
 
-        <h3>Документы ассоциации</h3>
+        <h3>{{__('front.documents')}}</h3>
 
         <div class="row py-5">
             @if($documents)
@@ -76,9 +76,10 @@
 
     <!--Start management-->
     <section id="management" class="py-5">
+        <div style="background: url('images/left_logo.png') no-repeat left; background-size: contain; width: calc(100vw*0.12); height: 100%; position: absolute; top: 0;left: 0"></div>
         <div class="container my-container">
             <div class="d-flex">
-                <h4>{{__('front.management')}}</h4>
+                <h4>{{__('front.board_of_director')}}</h4>
                 <div class="ms-5 d-flex">
                     <span class="me-2"><a class="previous2">&#10094;</a></span>
                     <span class="ms-2"><a class="next2">&#10095;</a></span>
@@ -145,7 +146,82 @@
             </div>
 
         </div>
-        <img src="images/left_logo.png" class="my-auto" alt="Left Logo">
+{{--        <img src="images/left_logo.png" class="my-auto" alt="Left Logo">--}}
     </section>
     <!--End management-->
+
+    <!--Start journal-->
+    <section id="journal" class="py-5 position-relative">
+        <div style="background: url('images/right_logo.png') no-repeat right; background-size: contain; width: calc(100vw*0.1); height: 100%; position: absolute; top: 0; right: 0"></div>
+        <div class="container my-container">
+            <div class="d-flex">
+                <h4>{{__('front.board_of_trust')}}</h4>
+                <div class="ms-5 d-flex">
+                    <span class="me-2"><a class="previous2">&#10094;</a></span>
+                    <span class="ms-2"><a class="next2">&#10095;</a></span>
+                </div>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper sw2 my-5">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    @if($teams2)
+                        @foreach($teams2 as $team)
+                            <div class="swiper-slide">
+                                <div class="swiper-in-management">
+                                    <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
+                                    <div class="management-content mt-3">
+                                        <h5>{{$team->team->name}}</h5>
+                                        <p>{{$team->team->position}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                    <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper-in-management">
+                                <div class="management-img" style="background: url('images/management.png') no-repeat center;background-size: contain"></div>
+                                <div class="management-content mt-3">
+                                    <h5>Арман Арманов</h5>
+                                    <p>Руководитель <br> Ассоциации</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-in-management">
+                                <div class="management-img" style="background: url('images/management.png') no-repeat center;background-size: contain"></div>
+                                <div class="management-content mt-3">
+                                    <h5>Арман Арманов</h5>
+                                    <p>Руководитель <br> Ассоциации</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-in-management">
+                                <div class="management-img" style="background: url('images/management.png') no-repeat center;background-size: contain"></div>
+                                <div class="management-content mt-3">
+                                    <h5>Арман Арманов</h5>
+                                    <p>Руководитель <br> Ассоциации</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-in-management">
+                                <div class="management-img" style="background: url('images/management.png') no-repeat center;background-size: contain"></div>
+                                <div class="management-content mt-3">
+                                    <h5>Арман Арманов</h5>
+                                    <p>Руководитель <br> Ассоциации</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--End journal-->
 @endsection

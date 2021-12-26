@@ -13,11 +13,15 @@
             <div class="swiper-wrapper">
                 @if($sliders)
                     <!-- Slides -->
+                        <div class="swiper-slide position-relative">
+                            <img src="images/back.png">
+                            <h2 class="crs-title">{{__('front.slider_const')}}</h2>
+                        </div>
                         @foreach($sliders as $slider)
                             <div class="swiper-slide position-relative">
                                 <img src="{{$slider->getFile('image')}}" style="width: 100%">
                                 <h2 class="crs-title">
-                                    <a class="text-white" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
+                                    <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
                                 </h2>
                             </div>
                         @endforeach
@@ -47,6 +51,7 @@
 
     <!--Start section activity-->
     <section id="activity" class="py-5">
+        <div style="background: url('images/right_logo.png') no-repeat right; background-size: contain; width: calc(100vw*0.12); height: 100%; position: absolute; top: 0;right: 0"></div>
         <div class="container my-container">
             <h4>{{__('front.task')}}</h4>
             <div class="row mt-4 py-4">
@@ -96,7 +101,7 @@
                 <a href="{{route('aboutAssociation')}}" class="btn my-btn-outline-info mx-auto p-3">Подробнее об Ассоциации</a>
             </div>
         </div>
-        <img src="images/right_logo.png" class="my-auto" alt="Right Logo">
+{{--        <img src="images/right_logo.png" class="my-auto" alt="Right Logo">--}}
     </section>
     <!--End section activity-->
 
@@ -147,6 +152,8 @@
 
     <!--Start management-->
     <section id="management" class="py-5">
+        <div style="background: url('images/left_logo.png') no-repeat left; background-size: contain; width: calc(100vw*0.12); height: 100%; position: absolute; top: 0;left: 0"></div>
+{{--        <img src="images/left_logo.png" class="my-auto" alt="Left Logo">--}}
         <div class="container my-container">
             <div class="d-flex">
                 <h4 class="me-2">{{__('front.management')}}</h4>
@@ -216,7 +223,6 @@
             </div>
 
         </div>
-        <img src="images/left_logo.png" class="my-auto" alt="Left Logo">
     </section>
     <!--End management-->
 
@@ -241,7 +247,7 @@
                             <div class="swiper-slide">
                                 <div>
                                     <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image')}}") no-repeat center; background-size: contain;'></div>
-                                    <p class="mt-3 text-center">{{$journal->title}}</p>
+                                    <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file')}}" download>{{$journal->title}}</a></p>
                                 </div>
                             </div>
                         @endforeach
@@ -283,6 +289,7 @@
 
     <!--Start association-->
     <section id="association" class="py-5">
+        <div style="background: url('images/right_logo.png') no-repeat right; background-size: contain; width: calc(100vw*0.1); height: 100%; position: absolute; top: 0; right: 0"></div>
         <div class="container my-container">
             <h4>{{__('front.join_to_association')}}</h4>
             <div class="row mt-4 py-4">
@@ -306,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <img src="images/right_logo.png" class="my-auto" alt="Right Logo">
+{{--        <img src="images/right_logo.png" class="my-auto" alt="Right Logo">--}}
     </section>
     <!--End association-->
 @endsection

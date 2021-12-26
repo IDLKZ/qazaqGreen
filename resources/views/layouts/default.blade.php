@@ -23,8 +23,9 @@
     <div class="container">
         <a class="navbar-brand d-flex" href="#">
 {{--            <div style='background: url("images/spaq_logo_RU.png") no-repeat center;background-size: contain;width: 180px;height: 72px'></div>--}}
-            <img src="{{asset('images/logo.png')}}" alt="Qazaq Green Logo">
-            <img src="{{asset('images/slogan.png')}}" alt="Qazaq Green Slogan">
+            <div style='width: 200px;height: 61px;background: url("{{asset('images/logoo.png')}}") no-repeat center; background-size: contain;'></div>
+{{--            <img src="{{asset('images/logo.png')}}" alt="Qazaq Green Logo">--}}
+{{--            <img src="{{asset('images/slogan.png')}}" alt="Qazaq Green Slogan">--}}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -158,7 +159,7 @@
     const crs = new Swiper('.crs', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
+        loop: false,
         slidesPerView: 1,
 
         // Navigation arrows
@@ -170,7 +171,7 @@
     const swiper = new Swiper('.sw', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
+        loop: false,
         slidesPerView: countSlides,
 
         // Navigation arrows
@@ -182,7 +183,7 @@
     const swiper2 = new Swiper('.sw2', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
+        loop: false,
         slidesPerView: countSlides,
 
         // Navigation arrows
@@ -194,7 +195,7 @@
     const swiper3 = new Swiper('.sw3', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
+        loop: false,
         slidesPerView: countSlides,
 
         // If we need pagination

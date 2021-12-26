@@ -33,7 +33,8 @@ class FrontController extends Controller
         $info = About::orderBy('created_at', 'desc')->first();
         $documents = CategoryDocumentRel::with('document')->where('category_id', 1)->get();
         $teams = PositionTeam::with('team')->where('position_id', 2)->get();
-        return view('about-association', compact('info', 'documents', 'teams'));
+        $teams2 = PositionTeam::with('team')->where('position_id', 3)->get();
+        return view('about-association', compact('info', 'documents', 'teams', 'teams2'));
     }
 
     public function vie()

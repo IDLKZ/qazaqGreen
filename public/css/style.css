@@ -1,7 +1,8 @@
 html,body {
-    font-family: 'Montserrat', inherit!important;
+    font-family: 'Montserrat', inherit, serif !important;
 }
 .pagination {justify-content: center;}
+.swiper-button-disabled {color: gray!important;}
 .my-btn-outline-info {
     color: #1A87A7;
     border: 1px solid #1A87A7;
