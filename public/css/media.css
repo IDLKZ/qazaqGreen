@@ -26,4 +26,5 @@
 @media only screen and (min-width: 1920px){
     .carousel-btn {top: calc(100vh*0.4);}
     .crs-title {top: calc(100vh*0.45);}
+    .space {height: calc(100vh*0.4)}
 }
