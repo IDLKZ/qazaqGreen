@@ -100,15 +100,15 @@
             <div class="col-md-6 col-sm-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 text-white">
-                        <h6>Контакты</h6>
-                        <p>+7 701 286 69 50 <br>
+                        <h6 class="fw-normal">Контакты</h6>
+                        <p class="my-4">+7 701 286 69 50 <br>
                             +7 702 939 93 95 (English speaking)
                         </p>
                         <p>info@spaq.kz</p>
                     </div>
                     <div class="col-md-6 col-sm-12 text-white">
-                        <h6>Адрес</h6>
-                        <p>улица Княгинина 11, м-он Чубары <br>
+                        <h6 class="fw-normal">Адрес</h6>
+                        <p class="my-4">улица Княгинина 11, м-он Чубары <br>
                             010000, город Нур-Султан
                         </p>
                         <p>Республика Казахстан</p>

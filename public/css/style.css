@@ -141,7 +141,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     line-height: 1.3;
 }
 .association-block{z-index: 100;margin-bottom: 15px;position: relative}
-footer {background-color: #4F5054; padding: 50px 0;font-weight: 500;font-size: 14px}
+footer {background-color: #4F5054; padding: 50px 0;font-weight: 400;font-size: 14px}
 
 
 .under-title:after {
