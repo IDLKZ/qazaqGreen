@@ -111,8 +111,17 @@ class PartnerController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdatePartnerRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'title_ru' => 'required|string|max:500',
+            'title_kz' => 'nullable|string|max:500',
+            'title_en' => 'nullable|string|max:500',
+            'image' => 'sometimes|file|image|max:100000',
+            'url' => 'nullable|string|url|max:255',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $partner = $this->partnerRepository->find($id);
 
         if (empty($partner)) {
@@ -122,7 +131,9 @@ class PartnerController extends AppBaseController
         }
 
         $partner = $this->partnerRepository->update($request->all(), $id);
-        $partner->uploadFile($request["image"],"image");
+        if ($request['image']){
+            $partner->uploadFile($request["image"],"image");
+        }
         Flash::success('Партнер успешно обновлена.');
 
         return redirect(route('partners.index'));

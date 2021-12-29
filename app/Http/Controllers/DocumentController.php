@@ -114,8 +114,16 @@ class DocumentController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateDocumentRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'title_ru' => 'required|string|max:255',
+            'title_kz' => 'nullable|string|max:255',
+            'title_en' => 'nullable|string|max:255',
+            'file' => 'sometimes|file|max:100000',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $document = $this->documentRepository->find($id);
 
         if (empty($document)) {
@@ -125,7 +133,10 @@ class DocumentController extends AppBaseController
         }
 
         $document = $this->documentRepository->update($request->all(), $id);
-        $document->uploadFile($request["file"],"file");
+        if ($request['file']){
+            $document->uploadFile($request["file"],"file");
+        }
+
         if($request->get("category")){if($document->categoryDocuments){foreach ($document->categoryDocuments as $docs){$docs->delete();}}foreach ($request->get("category") as $category){CategoryDocumentRel::add(["category_id"=>$category,"document_id"=>$document->id]);}}
 
 

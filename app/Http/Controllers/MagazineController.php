@@ -112,8 +112,21 @@ class MagazineController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateMagazineRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'slug' => 'string|max:255',
+            'title_ru' => 'required|string|max:500',
+            'title_kz' => 'nullable|string|max:500',
+            'title_en' => 'nullable|string|max:500',
+            'description_ru' => 'required|string',
+            'description_kz' => 'nullable|string',
+            'description_en' => 'nullable|string',
+            'image' => 'sometimes|image|max:1000000',
+            'file' => 'sometimes|file|max:1000000',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $magazine = $this->magazineRepository->find($id);
 
         if (empty($magazine)) {
@@ -123,8 +136,13 @@ class MagazineController extends AppBaseController
         }
 
         $magazine = $this->magazineRepository->update($request->all(), $id);
-        $magazine->uploadFile($request["image"],"image");
-        $magazine->uploadFile($request["file"],"file");
+        if ($request['image']){
+            $magazine->uploadFile($request["image"],"image");
+        }
+        if ($request['file']){
+            $magazine->uploadFile($request["file"],"file");
+        }
+
         Flash::success('Журнал успешно обновлен.');
 
         return redirect(route('magazines.index'));

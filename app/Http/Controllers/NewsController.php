@@ -112,8 +112,25 @@ class NewsController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateNewsRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'slug' => 'string|max:255',
+            'title_ru' => 'required|string|max:500',
+            'title_kz' => 'nullable|string|max:500',
+            'title_en' => 'nullable|string|max:500',
+            'subtitle_ru' => 'required|string|max:500',
+            'subtitle_kz' => 'nullable|string|max:500',
+            'subtitle_en' => 'nullable|string|max:500',
+            'thumbnail' => 'sometimes|file|image|max:100000',
+            'image' => 'sometimes|file|image|max:100000',
+            'authors' => 'nullable|string|max:500',
+            'description_ru' => 'required|string',
+            'description_kz' => 'nullable|string',
+            'description_en' => 'nullable|string',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $news = $this->newsRepository->find($id);
 
         if (empty($news)) {
@@ -123,8 +140,13 @@ class NewsController extends AppBaseController
         }
 
         $news = $this->newsRepository->update($request->all(), $id);
-        $news->uploadFile($request["image"],"image");
-        $news->uploadFile($request["thumbnail"],"thumbnail");
+        if ($request['image']){
+            $news->uploadFile($request["image"],"image");
+        }
+        if ($request['thumbnail']){
+            $news->uploadFile($request["thumbnail"],"thumbnail");
+        }
+
         Flash::success('Новость успешно обновлена');
 
         return redirect(route('news.index'));

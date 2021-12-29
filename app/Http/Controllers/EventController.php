@@ -111,8 +111,25 @@ class EventController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateEventRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'image' => 'sometimes|image',
+            'slug' => 'string|max:255',
+            'title_ru' => 'required|string|max:255',
+            'title_kz' => 'nullable|string|max:255',
+            'title_en' => 'nullable|string|max:255',
+            'subtitle_ru' => 'required|string|max:255',
+            'subtitle_kz' => 'nullable|string|max:255',
+            'subtitle_en' => 'nullable|string|max:255',
+            'description_ru' => 'required|string',
+            'description_kz' => 'nullable|string',
+            'description_en' => 'nullable|string',
+            'date_start' => 'required|string|max:255',
+            'date_end' => 'required|string|max:255',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $event = $this->eventRepository->find($id);
 
         if (empty($event)) {
@@ -122,7 +139,10 @@ class EventController extends AppBaseController
         }
 
         $event = $this->eventRepository->update($request->all(), $id);
-        $event->uoloadFile($request["image"],"image");
+        if ($request['image']){
+            $event->uoloadFile($request["image"],"image");
+        }
+
         Flash::success('Событие успешно обновлено.');
 
         return redirect(route('events.index'));

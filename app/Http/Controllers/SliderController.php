@@ -111,8 +111,20 @@ class SliderController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateSliderRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'image' => 'sometimes|file|image|max:100000',
+            'title_ru' => 'required|string|max:255',
+            'title_kz' => 'nullable|string|max:255',
+            'title_en' => 'nullable|string|max:255',
+            'description_ru' => 'required|string',
+            'description_kz' => 'nullable|string',
+            'description_en' => 'nullable|string',
+            'order' => 'required|integer',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $slider = $this->sliderRepository->find($id);
 
         if (empty($slider)) {
@@ -122,7 +134,9 @@ class SliderController extends AppBaseController
         }
 
         $slider = $this->sliderRepository->update($request->all(), $id);
-        $slider->uploadFile($request["image"],"image");
+        if ($request['image']){
+            $slider->uploadFile($request["image"],"image");
+        }
 
         Flash::success('Слайдер успешно обновлен.');
 

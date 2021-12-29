@@ -25,5 +25,5 @@
 <!-- Published Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('published', 'Опубликовано:') !!}
-    {!! Form::text('published', null, ['class' => 'form-control date_start','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('published', null, ['class' => 'form-control date-start','maxlength' => 255,'maxlength' => 255]) !!}
 </div>

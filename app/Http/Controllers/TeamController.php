@@ -113,8 +113,24 @@ class TeamController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateTeamRequest $request)
+    public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'slug' => 'nullable|string|max:255',
+            'name' => 'required|string|max:255',
+            'position' => 'required|string|max:500',
+            'image' => 'sometimes|image|file|max:100000',
+            'about' => 'nullable|string',
+            'instagram' => 'nullable|string|max:500',
+            'facebook' => 'nullable|string|max:500',
+            'vk' => 'nullable|string|max:500',
+            'linkedin' => 'nullable|string|max:500',
+            'twitter' => 'nullable|string|max:500',
+            'email' => 'nullable|string|max:500',
+            'website' => 'nullable|string|max:500',
+            'created_at' => 'nullable',
+            'updated_at' => 'nullable'
+        ]);
         $team = $this->teamRepository->find($id);
 
         if (empty($team)) {
@@ -124,7 +140,9 @@ class TeamController extends AppBaseController
         }
 
         $team = $this->teamRepository->update($request->all(), $id);
-        $team->uploadFile($request["image"],"image");
+        if ($request['image']){
+            $team->uploadFile($request["image"],"image");
+        }
         if($request->get("team")){if($team->positionTeams){foreach ($team->positionTeams as $teammate){$teammate->delete();}}foreach ($request->get("team") as $position){PositionTeam::add(["position_id"=>$position,"team_id"=>$team->id]);}}
 
         Flash::success('Сотрудник успешно обновлен.');
