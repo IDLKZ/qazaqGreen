@@ -23,7 +23,7 @@ class FrontController extends Controller
         $sliders = News::latest()->take(3)->get();
         $tasks = Task::all();
         $partners = Partner::all();
-        $teams = PositionTeam::with('team')->where('position_id', 1)->get();
+        $teams = PositionTeam::with('team')->where('position_id', 1)->latest()->get();
         $journals = Magazine::all();
         return view('welcome', compact('sliders', 'tasks', 'partners', 'teams', 'journals'));
     }
@@ -32,8 +32,8 @@ class FrontController extends Controller
     {
         $info = About::orderBy('created_at', 'desc')->first();
         $documents = CategoryDocumentRel::with('document')->where('category_id', 1)->get();
-        $teams = PositionTeam::with('team')->where('position_id', 2)->get();
-        $teams2 = PositionTeam::with('team')->where('position_id', 3)->get();
+        $teams = PositionTeam::with('team')->where('position_id', 2)->latest()->get();
+        $teams2 = PositionTeam::with('team')->where('position_id', 3)->latest()->get();
         return view('about-association', compact('info', 'documents', 'teams', 'teams2'));
     }
 

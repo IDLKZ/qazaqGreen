@@ -81,13 +81,13 @@
             <div class="d-flex">
                 <h4>{{__('front.board_of_director')}}</h4>
                 <div class="ms-5 d-flex">
-                    <span class="me-2"><a class="previous2">&#10094;</a></span>
-                    <span class="ms-2"><a class="next2">&#10095;</a></span>
+                    <span class="me-2"><a class="previous">&#10094;</a></span>
+                    <span class="ms-2"><a class="next">&#10095;</a></span>
                 </div>
             </div>
 
             <!-- Slider main container -->
-            <div class="swiper sw2 my-5">
+            <div class="swiper sw my-5">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     @if($teams)
@@ -95,7 +95,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-in-management">
                                     <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
-                                    <div class="management-content mt-3">
+                                    <div class="management-content mt-3 w-75">
                                         <h5>{{$team->team->name}}</h5>
                                         <p>{{$team->team->position}}</p>
                                     </div>
@@ -171,7 +171,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-in-management">
                                     <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
-                                    <div class="management-content mt-3">
+                                    <div class="management-content mt-3 w-75">
                                         <h5>{{$team->team->name}}</h5>
                                         <p>{{$team->team->position}}</p>
                                     </div>

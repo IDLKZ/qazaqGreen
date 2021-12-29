@@ -11,7 +11,7 @@
         <tbody>
         @foreach($teams as $team)
             <tr>
-                <td>{{ $team->slug }}</td>
+{{--                <td>{{ $team->slug }}</td>--}}
             <td>{{ $team->name }}</td>
             <td>{{ $team->position }}</td>
             <td><img src="{{ $team->getFile("image") }}" width="200px"></td>
