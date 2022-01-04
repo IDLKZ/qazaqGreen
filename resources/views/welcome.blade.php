@@ -14,7 +14,7 @@
                 @if($sliders)
                     <!-- Slides -->
                         <div class="swiper-slide position-relative">
-                            <img src="images/back.png">
+                            <img src="images/back.png" style="width: 100%">
                             <h2 class="crs-title">{{__('front.slider_const')}}</h2>
                         </div>
                         @foreach($sliders as $slider)

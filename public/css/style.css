@@ -79,6 +79,10 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     position: relative;
     background-color: #F2F2F2;
 }
+#management > .container {
+    position: relative;
+    z-index: 1000;
+}
 .act-block div:nth-child(1){
     color: #C2C2C2;
     font-weight: 700;
@@ -172,3 +176,5 @@ footer {background-color: #4F5054; padding: 50px 0;font-weight: 400;font-size: 1
     font-weight: 700;
 }
 .space {height: calc(100vh*0.3)}
+#target_vek > .nav-item:hover {background-color: grey}
+#target_news > .nav-item:hover {background-color: grey}

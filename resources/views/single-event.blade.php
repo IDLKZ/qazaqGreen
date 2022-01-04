@@ -1,7 +1,8 @@
 @extends('layouts.default')
 @section('content')
 
-    <div class="container">
+    <div class="container py-3">
+        <h3 class="card-title">{{$new->title}}</h3>
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -20,4 +21,5 @@
         </div>
     </div>
 
+    <div class="space"></div>
 @endsection

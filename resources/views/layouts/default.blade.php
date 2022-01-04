@@ -41,16 +41,16 @@
                 <li class="nav-item position-relative">
                     <a id="menu_vek" class="nav-link dropdown-toggle {{ Request::is(LaravelLocalization::getCurrentLocale().'/about/*') ? 'active' : '' }}">{!! __('front.menu_vek') !!}</a>
                     <ul id="target_vek">
-                        <li class="nav-item"><a href="{{route('vie')}}" class="nav-link">{{__('front.menu_vek_about')}}</a></li>
-                        <li class="nav-item"><a href="{{route('law')}}" class="nav-link">{{__('front.menu_vek_law')}}</a></li>
-                        <li class="nav-item"><a href="{{route('material')}}" class="nav-link">{{__('front.menu_vek_material')}}</a></li>
+                        <li class="nav-item me-0"><a href="{{route('vie')}}" class="nav-link">{{__('front.menu_vek_about')}}</a></li>
+                        <li class="nav-item me-0"><a href="{{route('law')}}" class="nav-link">{{__('front.menu_vek_law')}}</a></li>
+                        <li class="nav-item me-0"><a href="{{route('material')}}" class="nav-link">{{__('front.menu_vek_material')}}</a></li>
                     </ul>
                 </li>
                 <li class="nav-item position-relative">
                     <a id="menu_news" class="nav-link dropdown-toggle {{ Request::is(LaravelLocalization::getCurrentLocale().'/associations-new/*') ? 'active' : '' }}">{!! __('front.menu_news') !!}</a>
                     <ul id="target_news">
-                        <li class="nav-item"><a href="{{route('front-news')}}" class="nav-link">{{__('front.menu_news_new')}}</a></li>
-                        <li class="nav-item"><a href="{{route('front-smi')}}" class="nav-link">{{__('front.menu_news_smi')}}</a></li>
+                        <li class="nav-item me-0"><a href="{{route('front-news')}}" class="nav-link">{{__('front.menu_news_new')}}</a></li>
+                        <li class="nav-item me-0"><a href="{{route('front-smi')}}" class="nav-link">{{__('front.menu_news_smi')}}</a></li>
 {{--                        <li class="nav-item"><a href="{{route('front-event')}}" class="nav-link">{{__('front.menu_event')}}</a></li>--}}
                     </ul>
                 </li>

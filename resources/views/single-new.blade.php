@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container py-3">
-        <h2 class="card-title">{{$new->title}}</h2>
+        <h3 class="card-title">{{$new->title}}</h3>
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
