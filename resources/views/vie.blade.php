@@ -15,7 +15,7 @@
                 <!-- Slides -->
                     @foreach($sliders as $slider)
                         <div class="swiper-slide position-relative">
-                            <img src="{{$slider->getFile('image')}}" style="width: 100%;">
+                            <img src="{{$slider->getFile('image')}}" style="width: 100%;height: 100%">
                             <h2 class="crs-title">{{$slider->title}}</h2>
                         </div>
                     @endforeach
