@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <!--Start Slider-->
-    <section style="height: calc(100vh*0.7)" id="carousel">
+    <section style="height: calc(100vh*0.8)" id="carousel">
         <!-- If we need navigation buttons -->
         <div class="d-flex carousel-btn">
             <span class="me-2"><a class="button-previous text-white">&#10094;</a></span>
@@ -15,7 +15,7 @@
                 <!-- Slides -->
                     @foreach($sliders as $slider)
                         <div class="swiper-slide position-relative">
-                            <img src="{{$slider->getFile('image')}}" style="width: 100%">
+                            <img src="{{$slider->getFile('image')}}" style="width: 100%;">
                             <h2 class="crs-title">{{$slider->title}}</h2>
                         </div>
                     @endforeach

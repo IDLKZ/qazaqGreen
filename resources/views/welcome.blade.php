@@ -19,7 +19,7 @@
                         </div>
                         @foreach($sliders as $slider)
                             <div class="swiper-slide position-relative">
-                                <img src="{{$slider->getFile('image')}}" style="width: 100%">
+                                <img src="{{$slider->getFile('image')}}" style="width: 100%;filter: brightness(50%);">
                                 <h2 class="crs-title">
                                     <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
                                 </h2>
