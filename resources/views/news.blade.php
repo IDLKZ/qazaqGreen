@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="container py-3">
+    <div class="container my-container py-3">
         <div class="under-title">
             <h1>Новости</h1>
         </div>
