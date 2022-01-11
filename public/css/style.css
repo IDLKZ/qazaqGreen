@@ -41,7 +41,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
 .nav-item:hover ul{
     display: block;
 }
-.active:before {
+.nav-item > .active:before {
     content: '';
     height: 4px;
     width: 90%;

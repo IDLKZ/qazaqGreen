@@ -140,7 +140,7 @@ class EventController extends AppBaseController
 
         $event = $this->eventRepository->update($request->all(), $id);
         if ($request['image']){
-            $event->uoloadFile($request["image"],"image");
+            $event->uploadFile($request["image"],"image");
         }
 
         Flash::success('Событие успешно обновлено.');

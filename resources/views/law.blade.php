@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 @endpush
 @section('content')
-    <div class="container py-5">
+    <div class="container my-container py-5">
         <h1>Законодательство</h1>
         <div class="under-title">
             <b>НОРМАТИВНЫЕ ПРАВОВЫЕ АКТЫ</b>
