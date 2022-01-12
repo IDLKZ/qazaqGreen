@@ -84,4 +84,9 @@ class FrontController extends Controller
         $news = Event::paginate(8);
         return view('event', compact('news'));
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

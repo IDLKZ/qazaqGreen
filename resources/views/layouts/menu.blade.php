@@ -95,12 +95,12 @@
 
 
 
-<li class="nav-item">
-    <a href="{{ route('contacts.index') }}"
-       class="nav-link {{ Request::is('contacts*') ? 'active' : '' }}">
-        <p><i class="fas fa-envelope ml-2"></i>Контакты</p>
-    </a>
-</li>
+{{--<li class="nav-item">--}}
+{{--    <a href="{{ route('contacts.index') }}"--}}
+{{--       class="nav-link {{ Request::is('contacts*') ? 'active' : '' }}">--}}
+{{--        <p><i class="fas fa-envelope ml-2"></i>Контакты</p>--}}
+{{--    </a>--}}
+{{--</li>--}}
 
 
 

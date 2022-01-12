@@ -168,11 +168,11 @@
             filebrowserUploadMethod: 'form'
         })
     }
-    $(".date-start").datetimepicker({
-        format:'Y-m-d H:i'
+    $(".date-start").datepicker({
+        format:'dd.mm.yyyy'
     });
-    $(".date-end").datetimepicker({
-        format:'Y-m-d H:i'
+    $(".date-end").datepicker({
+        format:'dd.mm.yyyy'
     });
 </script>
 @jquery

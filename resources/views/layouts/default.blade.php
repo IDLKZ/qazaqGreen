@@ -62,7 +62,7 @@
                     <a href="{{route('front-event')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/event') ? 'active' : '' }}">Анонс</a>
                 </li>
                 <li class="nav-item position-relative">
-                    <a class="nav-link">{{__('front.menu_contact')}}</a>
+                    <a href="{{route('front-contact')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/contact') ? 'active' : '' }}">{{__('front.menu_contact')}}</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
@@ -74,7 +74,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li>
-                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                <a class="dropdown-item text-uppercase" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['native'] }}
                                 </a>
                             </li>
@@ -95,8 +95,9 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <img src="images/footer_logo.png" alt="Footer Logo">
-                <p class="mt-2 text-white">Объединение юридических лиц <br>
-                    Ассоциация "QAZAQ GREEN"</p>
+                <p class="mt-2 text-white">Объединение юридических лиц <br> «Ассоциация
+                    ВИЭ «Qazaq Green»
+                </p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="row">
@@ -109,8 +110,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 text-white">
                         <h6 class="fw-normal">Адрес</h6>
-                        <p class="my-4">улица Княгинина 11, м-он Чубары <br>
-                            010000, город Нур-Султан
+                        <p class="my-4">ул. Сыганак 43, 010000, бизнес-центр «Ансар», г. Нур-Султан
                         </p>
                         <p>Республика Казахстан</p>
                     </div>

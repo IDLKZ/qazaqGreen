@@ -57,7 +57,13 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     left: calc(100vw*0.2);
     z-index: 100;
 }
-.carousel-btn a {
+.carousel-btn-2 {
+    position: absolute;
+    top: calc(100vh*0.2);
+    left: calc(100vw*0.2);
+    z-index: 100;
+}
+.carousel-btn a, .carousel-btn-2 a {
     padding: 5px 10px;
     border: 1px solid;
     border-radius: 100%;
@@ -70,6 +76,13 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     width: calc(100vw*0.5);
     left: calc(100vw*0.2);
     top: calc(100vh*0.5);
+    color: white;
+}
+.crs-title-2 {
+    position: absolute;
+    width: calc(100vw*0.5);
+    left: calc(100vw*0.2);
+    top: calc(100vh*0.3);
     color: white;
 }
 #carousel > .swiper {
@@ -176,9 +189,8 @@ footer {background-color: #4F5054; padding: 50px 0;font-weight: 400;font-size: 1
     font-weight: 700;
 }
 .space {height: calc(100vh*0.3)}
-#target_vek > .nav-item:hover {background-color: grey}
-#target_news > .nav-item:hover {background-color: grey}
-.news-description{
-    height: 130px;
-    overflow: hidden;
+#target_vek > .nav-item:hover {background-color: #bec6ce}
+#target_news > .nav-item:hover {background-color: #bec6ce}
+.news-description > p{
+    margin-bottom: 0!important;
 }

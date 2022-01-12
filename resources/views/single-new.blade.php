@@ -14,7 +14,7 @@
                         <p class="card-text">
                             {!! $new->description !!}
                         </p>
-                        <p class="card-text"><small class="text-muted">{{$new->created_at->diffForHumans()}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{$new->created_at->format('d.m.Y')}}</small></p>
                     </div>
                 </div>
             </div>

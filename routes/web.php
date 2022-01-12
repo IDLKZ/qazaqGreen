@@ -35,6 +35,7 @@ Route::group(
     });
     Route::get('/event', [FrontController::class, 'event'])->name('front-event');
     Route::get('/event/{slug}', [FrontController::class, 'singleEvent'])->name('front-single-event');
+    Route::get('/contact', [FrontController::class, 'contact'])->name('front-contact');
 });
 
 Auth::routes(["register"=>false]);

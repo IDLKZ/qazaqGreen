@@ -19,7 +19,7 @@
                         <div>Опубликовано: {{$new->created_at->format('d-m-Y')}}</div>
 
                         <div class="news-description my-3">
-                            {!! \Illuminate\Support\Str::limit($new->description, 180) !!}
+                            {!! \Illuminate\Support\Str::limit($new->description, 200) !!}
                         </div>
                     </div>
                 @endforeach

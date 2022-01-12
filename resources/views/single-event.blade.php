@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-    <div class="container py-3">
+    <div class="container my-container py-3">
         <h3 class="card-title">{{$new->title}}</h3>
         <div class="card mb-3">
             <div class="row g-0">
@@ -14,7 +14,7 @@
                         <p class="card-text">
                             {!! $new->description !!}
                         </p>
-                        <p class="card-text"><small class="text-muted">{{$new->created_at->diffForHumans()}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{$new->created_at->format('d.m.Y')}}</small></p>
                     </div>
                 </div>
             </div>

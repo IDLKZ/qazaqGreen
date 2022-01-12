@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="container py-3">
+    <div class="container my-container py-3">
         <div class="under-title">
             <h1>{{__('front.menu_event')}}</h1>
         </div>
@@ -16,10 +16,10 @@
                             <a href="{{route('front-single-event', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>
                         </div>
 
-                        <div>Опубликовано: {{$new->created_at->format('d-m-Y')}}</div>
+                        <div>Дата проведения:</div>
 
-                        <div class="news-description my-3">
-                            {!! \Illuminate\Support\Str::limit($new->description, 140) !!}
+                        <div class="news-description">
+                            {{$new->date_start}} - {{$new->date_end}}
                         </div>
                     </div>
                 @endforeach

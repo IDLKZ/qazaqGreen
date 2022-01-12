@@ -3,7 +3,7 @@
     <!--Start Slider-->
     <section style="height: calc(100vh*0.8)" id="carousel">
         <!-- If we need navigation buttons -->
-        <div class="d-flex carousel-btn">
+        <div class="d-flex carousel-btn-2">
             <span class="me-2"><a class="button-previous text-white">&#10094;</a></span>
             <span class="ms-2"><a class="button-next text-white">&#10095;</a></span>
         </div>
@@ -16,16 +16,16 @@
                     @foreach($sliders as $slider)
                         <div class="swiper-slide position-relative">
                             <img src="{{$slider->getFile('image')}}" style="width: 100%;height: 100%">
-                            <h2 class="crs-title">{{$slider->title}}</h2>
+                            <h4 class="crs-title-2">{{$slider->title}}</h4>
                         </div>
                     @endforeach
                 @else
                 <!-- Slides -->
                     <div class="swiper-slide position-relative">
                         <img src="images/back.png">
-                        <h2 class="crs-title">Единая площадка для казахстанских
+                        <h4 class="crs-title-2">Единая площадка для казахстанских
                             и международных игроков
-                            в отрасли зеленой энергетики</h2>
+                            в отрасли зеленой энергетики</h4>
                     </div>
                     <div class="swiper-slide position-relative">
                         <img src="images/back_2.png">
