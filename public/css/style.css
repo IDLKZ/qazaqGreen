@@ -80,7 +80,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
 }
 .crs-title-2 {
     position: absolute;
-    width: calc(100vw*0.5);
+    width: calc(100vw*0.7);
     left: calc(100vw*0.2);
     top: calc(100vh*0.3);
     color: white;

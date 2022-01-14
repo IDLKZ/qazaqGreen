@@ -16,7 +16,7 @@
                     @foreach($sliders as $slider)
                         <div class="swiper-slide position-relative">
                             <img src="{{$slider->getFile('image')}}" style="width: 100%;height: 100%">
-                            <h4 class="crs-title-2">{{$slider->title}}</h4>
+                            <h5 class="crs-title-2">{!! $slider->getDescriptionAttribute() !!}</h5>
                         </div>
                     @endforeach
                 @else
