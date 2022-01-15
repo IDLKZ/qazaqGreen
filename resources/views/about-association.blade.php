@@ -1,14 +1,17 @@
 @extends('layouts.default')
 @push('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .text-align-justify > p {text-align: justify}
+    </style>
 @endpush
 @section('content')
-    <div class="container py-5">
+    <div class="container my-container py-5">
         <div class="under-title">
             <h1>{{$info->title}}</h1>
         </div>
 
-        <div class="my-5">
+        <div class="my-3 text-align-justify">
             {!! $info->description !!}
         </div>
 

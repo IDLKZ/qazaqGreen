@@ -150,8 +150,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js" integrity="sha512-tPXUMumrKam4J6sFLWF/06wvl+Qyn27gMfmynldU730ZwqYkhT2dFUmttn2PuVoVRgzvzDicZ/KgOhWD+KAYQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
+<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+@stack('page_scripts')
 
 <script>
     $(function () {
@@ -161,12 +161,24 @@
     $("input[data-bootstrap-switch]").each(function () {
         $(this).bootstrapSwitch('state', $(this).prop('checked'));
     });
-    let classNames = ['description_ru','description_kz','description_en',];
+    let classNames = ['description_ru','description_kz','description_en'];
     for (let i = 0; i<classNames.length;i++){
         CKEDITOR.replace(classNames[i],{
             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         })
+    }
+
+    let classIds = ['titleKZ','titleRU','titleEN'];
+    for (let i = 0; i<classIds.length;i++){
+        ClassicEditor
+            .create( document.querySelector( '#'+classIds[i] ) )
+            .then( editor => {
+                console.log( editor );
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
     }
     $(".date-start").datepicker({
         format:'dd.mm.yyyy'
@@ -176,10 +188,11 @@
     });
 </script>
 @jquery
+
 @toastr_js
 @toastr_render
 @stack('third_party_scripts')
 
-@stack('page_scripts')
+
 </body>
 </html>

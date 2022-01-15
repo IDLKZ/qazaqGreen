@@ -33,8 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.1863529955326!2d71.4292087155987!3d51.12347057957389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424584192053fef9%3A0x6c9e6c87ed7fb501!2z0JDQvdGB0LDRgA!5e0!3m2!1sru!2skz!4v1642010544187!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1079.316542125863!2d71.41740148575623!3d51.178608708485335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245872d1cc47921%3A0xe7ec066188284d7f!2z0YPQu9C40YbQsCDQkdC10LnQsdC40YLRiNC40LvQuNC6IDQzLCDQndGD0YAt0KHRg9C70YLQsNC9IDAxMDAwMA!5e0!3m2!1sru!2skz!4v1642229092356!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            </div>
         </div>
     </div>
 @endsection

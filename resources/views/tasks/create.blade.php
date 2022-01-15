@@ -17,7 +17,7 @@
 
         <div class="card">
 
-            {!! Form::open(['route' => 'tasks.store']) !!}
+            {!! Form::open(['route' => 'tasks.store', 'files'=>true]) !!}
 
             <div class="card-body">
 
@@ -36,4 +36,7 @@
 
         </div>
     </div>
+
+
 @endsection
+

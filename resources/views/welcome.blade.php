@@ -14,7 +14,8 @@
                 @if($sliders)
                     <!-- Slides -->
                         <div class="swiper-slide position-relative">
-                            <img src="images/back.png" style="width: 100%">
+{{--                            <div style="width: 100%;height: 100%;background: url('images/back.jpg') no-repeat center;background-size: contain"></div>--}}
+                            <img src="images/back.jpg" style="width: 100%;filter: brightness(50%);">
                             <h2 class="crs-title">{{__('front.slider_const')}}</h2>
                         </div>
                         @foreach($sliders as $slider)
@@ -60,7 +61,7 @@
                         <div class="my-col col-sm-12 act-block">
                             <div>{{$task->order}}</div>
                             <div>
-                                {{$task->title}}
+                                {!! $task->title !!}
                             </div>
                         </div>
                     @endforeach

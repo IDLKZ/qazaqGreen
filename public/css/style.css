@@ -53,7 +53,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
 #carousel {position: relative}
 .carousel-btn {
     position: absolute;
-    top: calc(100vh*0.4);
+    top: calc(100vh*0.6);
     left: calc(100vw*0.2);
     z-index: 100;
 }
@@ -75,7 +75,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     position: absolute;
     width: calc(100vw*0.5);
     left: calc(100vw*0.2);
-    top: calc(100vh*0.5);
+    top: calc(100vh*0.7);
     color: white;
 }
 .crs-title-2 {
@@ -86,7 +86,7 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     color: white;
 }
 #carousel > .swiper {
-    height: 600px;
+    height: 800px;
 }
 #activity, #management, #association {
     position: relative;
