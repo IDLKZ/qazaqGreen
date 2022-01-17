@@ -17,20 +17,32 @@
 
         <div class="row my-5" id="contact-page">
             <div class="col-md-6 col-sm-12">
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                     <img src="{{asset('images/contact-map.png')}}">
                     <span>ул. Сыганак 43, 010000, бизнес-центр «Ансар», <br> г. Нур-Султан, Республика Казахстан</span>
                 </div>
-                <div class="d-flex my-3">
+                <div class="d-flex my-3 align-items-center">
                     <img src="{{asset('images/contact-phone.png')}}">
                     <span>
                             +7 701 286 69 50 <br>
                         +7 702 939 93 95 (English speaking)
                         </span>
                 </div>
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                     <img src="{{asset('images/contact-email.png')}}">
                     <span>info@spaq.kz</span>
+                </div>
+                <div class="d-flex my-3 align-items-center">
+                    <img src="{{asset('images/-facebook.png')}}">
+                    <a href="https://www.facebook.com/SPAQ.KZ/" target="_blank">
+                        Ассоциация ВИЭ "Qazaq Green"
+                        </a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="{{asset('images/youtube.png')}}">
+                    <a href="https://youtube.com/channel/UC7ur9U0b2kO8pHVii2UoN1A" target="_blank">
+                        Ассоциация ВИЭ Qazaq Green
+                        </a>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
