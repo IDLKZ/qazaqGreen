@@ -15,7 +15,7 @@
                 <!-- Slides -->
                     @foreach($sliders as $slider)
                         <div class="swiper-slide position-relative">
-                            <div style='width: 100%;height: 600px;background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{$slider->getFile('image')}}") no-repeat center;background-size: cover'></div>
+                            <div style='width: 100%;height: 100%;background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{$slider->getFile('image')}}") no-repeat center;background-size: cover'></div>
 {{--                            <img src="{{$slider->getFile('image')}}" style="width: 100%;filter: brightness(50%)">--}}
                             <h6 class="crs-title-2">{!! $slider->getDescriptionAttribute() !!}</h6>
                         </div>

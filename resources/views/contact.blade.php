@@ -33,16 +33,20 @@
                     <span>info@spaq.kz</span>
                 </div>
                 <div class="d-flex my-3 align-items-center">
-                    <img src="{{asset('images/-facebook.png')}}">
                     <a href="https://www.facebook.com/SPAQ.KZ/" target="_blank">
-                        Ассоциация ВИЭ "Qazaq Green"
-                        </a>
+                        <img src="{{asset('images/-facebook.png')}}">
+                    </a>
+{{--                    <a href="https://www.facebook.com/SPAQ.KZ/" target="_blank">--}}
+{{--                        Ассоциация ВИЭ "Qazaq Green"--}}
+{{--                        </a>--}}
                 </div>
                 <div class="d-flex align-items-center">
-                    <img src="{{asset('images/youtube.png')}}">
                     <a href="https://youtube.com/channel/UC7ur9U0b2kO8pHVii2UoN1A" target="_blank">
-                        Ассоциация ВИЭ Qazaq Green
-                        </a>
+                        <img src="{{asset('images/youtube.png')}}">
+                    </a>
+{{--                    <a href="https://youtube.com/channel/UC7ur9U0b2kO8pHVii2UoN1A" target="_blank">--}}
+{{--                        Ассоциация ВИЭ Qazaq Green--}}
+{{--                        </a>--}}
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
