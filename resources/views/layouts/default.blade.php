@@ -71,10 +71,10 @@
                         {{LaravelLocalization::getCurrentLocaleNative()}}
                     </a>
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink" style="font-size: 12px">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li>
-                                <a class="dropdown-item text-uppercase" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                <a class="dropdown-item text-capitalize" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['native'] }}
                                 </a>
                             </li>
@@ -104,15 +104,14 @@
                     <div class="col-md-6 col-sm-12 text-white">
                         <h6 class="fw-normal">Контакты</h6>
                         <p class="my-4">+7 701 286 69 50 <br>
-                            +7 702 939 93 95 (English speaking)
+                            +7 702 939 93 95 (English speaking) <br> info@spaq.kz
                         </p>
-                        <p>info@spaq.kz</p>
                     </div>
                     <div class="col-md-6 col-sm-12 text-white">
                         <h6 class="fw-normal">Адрес</h6>
-                        <p class="my-4">ул. Сыганак 43, 010000, <br>бизнес-центр «Ансар», г. Нур-Султан
+                        <p class="my-4">ул. Сыганак 43, 010000, <br>бизнес-центр «Ансар», г. Нур-Султан <br> Республика Казахстан
                         </p>
-                        <p>Республика Казахстан</p>
+
                     </div>
                 </div>
             </div>

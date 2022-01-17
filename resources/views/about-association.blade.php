@@ -6,12 +6,12 @@
     </style>
 @endpush
 @section('content')
-    <div class="container my-container py-5">
+    <div class="container my-container py-4">
         <div class="under-title">
             <h1>{{$info->title}}</h1>
         </div>
 
-        <div class="my-3 text-align-justify">
+        <div class="my-5 text-align-justify">
             {!! $info->description !!}
         </div>
 
