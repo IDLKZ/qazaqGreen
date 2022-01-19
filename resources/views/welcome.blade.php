@@ -24,6 +24,7 @@
                                 <h2 class="crs-title">
                                     <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
                                 </h2>
+                                <a href="{{route('front-single-new', $slider->slug)}}" class="crs-btn btn">Подробнее &#8594;</a>
                             </div>
                         @endforeach
                     @else

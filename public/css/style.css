@@ -85,6 +85,14 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     top: calc(100vh*0.3);
     color: white;
 }
+.crs-btn {
+    position: absolute;
+    left: calc(100vw*0.2);
+    top: calc(100vh*0.9);
+    border: 1px solid white;
+    padding: 0.7rem 1.5rem;
+    color: white!important;
+}
 #carousel > .swiper {
     height: 800px;
 }

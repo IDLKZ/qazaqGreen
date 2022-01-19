@@ -2,8 +2,8 @@
 @push('css')
     <style>
         #contact-page img {
-            width: 40px;
-            height: 40px;
+            width: 20px;
+            height: 20px;
             margin-right: 15px;
         }
         iframe {width: 100%}
