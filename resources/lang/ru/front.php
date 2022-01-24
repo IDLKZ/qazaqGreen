@@ -4,11 +4,11 @@
 return [
     'menu_main' => 'Главная',
     'menu_about' => 'О нас',
-    'menu_vek' => 'Возобновляемая <br> энергетика в Казахстане',
+    'menu_vek' => 'ВИЭ в Казахстане',
     'menu_vek_about' => 'Об отрасли ВИЭ',
     'menu_vek_law' => 'Законодательство',
     'menu_vek_material' => 'Материалы',
-    'menu_news' => 'Новости <br> Ассоциации',
+    'menu_news' => 'Новости',
     'menu_news_new' => 'Новости',
     'menu_news_smi' => 'СМИ о Нас',
     'menu_event' => 'Мероприятия',

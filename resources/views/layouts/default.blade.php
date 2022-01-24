@@ -59,7 +59,7 @@
                     <a class="nav-link">{{__('front.menu_press')}}</a>
                 </li>
                 <li class="nav-item position-relative">
-                    <a href="{{route('front-event')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/event') ? 'active' : '' }}">Анонс</a>
+                    <a href="{{route('front-event')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/event') ? 'active' : '' }}">{{__('front.menu_event')}}</a>
                 </li>
                 <li class="nav-item position-relative">
                     <a href="{{route('front-contact')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/contact') ? 'active' : '' }}">{{__('front.menu_contact')}}</a>
