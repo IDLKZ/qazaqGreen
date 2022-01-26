@@ -4,9 +4,9 @@
 @endpush
 @section('content')
     <div class="container my-container py-5">
-        <h1>Законодательство</h1>
+        <h1>{{__('front.law')}}</h1>
         <div class="under-title">
-            <b>НОРМАТИВНЫЕ ПРАВОВЫЕ АКТЫ</b>
+            <b>{{__('front.law_materials')}}</b>
         </div>
 
         <div class="row py-5">

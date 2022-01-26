@@ -3,7 +3,7 @@
 @section('content')
     <div class="container my-container py-3">
         <div class="under-title">
-            <h1>Новости</h1>
+            <h1>{{__('front.menu_news')}}</h1>
         </div>
 
         <div class="row my-5">
@@ -16,7 +16,7 @@
                             <a href="{{route('front-single-new', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>
                         </div>
 
-                        <div>Опубликовано: {{$new->created_at->format('d-m-Y')}}</div>
+                        <div>{{__('front.published')}}: {{$new->created_at->format('d-m-Y')}}</div>
 
                         <div class="news-description my-3">
                             {!! \Illuminate\Support\Str::limit($new->description, 200) !!}

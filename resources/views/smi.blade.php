@@ -3,7 +3,7 @@
 @section('content')
     <div class="container my-container py-3">
         <div class="under-title">
-            <h1>СМИ о Нас</h1>
+            <h1>{{__('front.menu_news_smi')}}</h1>
         </div>
 
         <div class="row my-5">
@@ -11,8 +11,8 @@
                 @foreach($news as $new)
                     <div class="row my-2">
                         <div class="col-md-3 col-sm-6">
-                            <p><b>Название журнала/сайта</b></p>
-                            <p>Опубликовано: {{$new->published}} </p>
+                            <p><b>{{__('front.title_journals')}}</b></p>
+                            <p>{{__('front.published')}}: {{$new->published}} </p>
                         </div>
                         <div class="col-md-9 col-sm-6">
                             <a href="{{$new->url}}" target="_blank">
@@ -26,8 +26,8 @@
 
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
-                        <p><b>Название журнала/сайта</b></p>
-                        <p>Опубликовано: 15 ноября 2021 </p>
+                        <p><b>{{__('front.title_journals')}}</b></p>
+                        <p>{{__('front.published')}}: 15 ноября 2021 </p>
                     </div>
                     <div class="col-md-9 col-sm-6">
                         <a href="#">ВИЭ в настоящем и будущем России. Интервью с главой Ассоциации развития возобновляемой энергетики</a>

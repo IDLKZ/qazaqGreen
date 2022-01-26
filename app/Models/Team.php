@@ -40,7 +40,7 @@ class Team extends Model
     {
         return [
             'slug' => [
-                'source' => 'name'
+                'source' => 'name_ru'
             ]
         ];
     }
@@ -56,8 +56,12 @@ class Team extends Model
 
     public $fillable = [
         'slug',
-        'name',
-        'position',
+        'name_kz',
+        'name_ru',
+        'name_en',
+        'position_kz',
+        'position_ru',
+        'position_en',
         'image',
         'about',
         'instagram',
@@ -97,8 +101,12 @@ class Team extends Model
      */
     public static $rules = [
         'slug' => 'nullable|string|max:255',
-        'name' => 'required|string|max:255',
-        'position' => 'required|string|max:500',
+        'name_kz' => 'required|string|max:255',
+        'name_ru' => 'required|string|max:255',
+        'name_en' => 'required|string|max:255',
+        'position_kz' => 'required|string|max:500',
+        'position_ru' => 'required|string|max:500',
+        'position_en' => 'required|string|max:500',
         'image' => 'required|image|file|max:100000',
         'about' => 'nullable|string',
         'instagram' => 'nullable|string|max:500',

@@ -5,7 +5,7 @@
 @section('content')
     <div class="container my-container py-5">
         <div class="under-title">
-            <h1>Материалы</h1>
+            <h1>{{__('front.menu_vek_material')}}</h1>
         </div>
 
         <div class="row py-5">

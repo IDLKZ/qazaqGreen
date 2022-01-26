@@ -16,7 +16,7 @@
                             <a href="{{route('front-single-event', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>
                         </div>
 
-                        <div>Дата проведения:</div>
+                        <div>{{__('front.date_event')}}:</div>
 
                         <div class="news-description">
                             {{$new->date_start}} - {{$new->date_end}}

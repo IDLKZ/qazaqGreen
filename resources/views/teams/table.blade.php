@@ -12,8 +12,8 @@
         @foreach($teams as $team)
             <tr>
 {{--                <td>{{ $team->slug }}</td>--}}
-            <td>{{ $team->name }}</td>
-            <td>{{ $team->position }}</td>
+            <td>{{ $team->name_ru }}</td>
+            <td>{{ $team->position_ru }}</td>
             <td><img src="{{ $team->getFile("image") }}" width="200px"></td>
                 <td width="120">
                     {!! Form::open(['route' => ['teams.destroy', $team->id], 'method' => 'delete']) !!}

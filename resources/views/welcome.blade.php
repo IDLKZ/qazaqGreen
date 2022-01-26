@@ -24,7 +24,7 @@
                                 <h2 class="crs-title">
                                     <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
                                 </h2>
-                                <a href="{{route('front-single-new', $slider->slug)}}" class="crs-btn btn">Подробнее &#8594;</a>
+                                <a href="{{route('front-single-new', $slider->slug)}}" class="crs-btn btn">{!! __('front.btn_more') !!} &#8594;</a>
                             </div>
                         @endforeach
                     @else
@@ -100,7 +100,7 @@
                 @endif
             </div>
             <div class="d-flex justify-content-center">
-                <a href="{{route('aboutAssociation')}}" class="btn my-btn-outline-info mx-auto">Подробнее об Ассоциации</a>
+                <a href="{{route('aboutAssociation')}}" class="btn my-btn-outline-info mx-auto">{!! __('front.btn_more_ass') !!}</a>
             </div>
         </div>
 {{--        <img src="images/right_logo.png" class="my-auto" alt="Right Logo">--}}

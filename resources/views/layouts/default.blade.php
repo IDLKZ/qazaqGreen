@@ -95,21 +95,20 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <img src="images/footer_logo.png" alt="Footer Logo">
-                <p class="mt-2 text-white">Объединение юридических лиц <br> «Ассоциация
-                    ВИЭ «Qazaq Green»
+                <p class="mt-2 text-white">{!! __('front.footer_text') !!}
                 </p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 text-white">
-                        <h6 class="fw-normal">Контакты</h6>
+                        <h6 class="fw-normal">{{__('front.menu_contact')}}</h6>
                         <p class="my-4">+7 701 286 69 50 <br>
                             +7 702 939 93 95 (English speaking) <br> info@spaq.kz
                         </p>
                     </div>
                     <div class="col-md-6 col-sm-12 text-white">
-                        <h6 class="fw-normal">Адрес</h6>
-                        <p class="my-4">ул. Сыганак 43, 010000, <br>бизнес-центр «Ансар», г. Нур-Султан <br> Республика Казахстан
+                        <h6 class="fw-normal">{{__('front.address')}}</h6>
+                        <p class="my-4">{!! __('front.footer_address') !!}
                         </p>
 
                     </div>

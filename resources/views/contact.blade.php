@@ -19,7 +19,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="d-flex align-items-center">
                     <img src="{{asset('images/contact-map.png')}}">
-                    <span>ул. Сыганак 43, 010000, бизнес-центр «Ансар», <br> г. Нур-Султан, Республика Казахстан</span>
+                    <span>{!! __('front.footer_address') !!}</span>
                 </div>
                 <div class="d-flex my-3 align-items-center">
                     <img src="{{asset('images/contact-phone.png')}}">

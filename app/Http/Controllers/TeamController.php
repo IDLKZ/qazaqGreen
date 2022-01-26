@@ -117,8 +117,12 @@ class TeamController extends AppBaseController
     {
         $this->validate($request, [
             'slug' => 'nullable|string|max:255',
-            'name' => 'required|string|max:255',
-            'position' => 'required|string|max:500',
+            'name_kz' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'name_en' => 'required|string|max:255',
+            'position_kz' => 'required|string|max:500',
+            'position_ru' => 'required|string|max:500',
+            'position_en' => 'required|string|max:500',
             'image' => 'sometimes|image|file|max:100000',
             'about' => 'nullable|string',
             'instagram' => 'nullable|string|max:500',

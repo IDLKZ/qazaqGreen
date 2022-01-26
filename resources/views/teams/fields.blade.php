@@ -1,17 +1,35 @@
 
 <!-- Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('name', 'ФИО:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('Name_kz', 'ФИО (kz):') !!}
+    {!! Form::text('name_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- Name Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Name_ru', 'ФИО (ru):') !!}
+    {!! Form::text('name_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- Name Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Name_en', 'ФИО (en):') !!}
+    {!! Form::text('name_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('position', 'Позиция:') !!}
-    {!! Form::text('position', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('Position_kz', 'Должность (kz):') !!}
+    {!! Form::text('position_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
-
-
+<!-- Name Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Position_ru', 'Должность (ru):') !!}
+    {!! Form::text('position_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- Name Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Position_en', 'Должность (en):') !!}
+    {!! Form::text('position_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
 
 <!-- Position Field -->
 <div class="form-group col-sm-6">
