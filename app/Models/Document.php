@@ -40,7 +40,9 @@ class Document extends Model
         'title_ru',
         'title_kz',
         'title_en',
-        'file'
+        'file_kz',
+        'file_ru',
+        'file_en',
     ];
 
     /**
@@ -53,7 +55,9 @@ class Document extends Model
         'title_ru' => 'string',
         'title_kz' => 'string',
         'title_en' => 'string',
-        'file' => 'string'
+        'file_kz' => 'string',
+        'file_ru' => 'string',
+        'file_en' => 'string',
     ];
 
     /**
@@ -65,7 +69,9 @@ class Document extends Model
         'title_ru' => 'required|string|max:255',
         'title_kz' => 'nullable|string|max:255',
         'title_en' => 'nullable|string|max:255',
-        'file' => 'required|file|max:100000',
+        'file_kz' => 'required|file|max:100000',
+        'file_ru' => 'nullable|file|max:100000',
+        'file_en' => 'nullable|file|max:100000',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

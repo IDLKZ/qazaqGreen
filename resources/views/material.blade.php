@@ -17,7 +17,13 @@
                                 {{$document->document->title}}
                             </div>
                             <div class="col-2 p-0">
-                                <a download href="{{$document->document->getFile('file')}}"><i class="bi bi-file-earmark-pdf"></i></a>
+                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                    <a download href="{{$document->document->getFile('file_ru')}}"><i class="bi bi-file-earmark-pdf"></i></a>
+                                @elseif(LaravelLocalization::getCurrentLocale() == 'kz')
+                                    <a download href="{{$document->document->getFile('file_kz')}}"><i class="bi bi-file-earmark-pdf"></i></a>
+                                @else
+                                    <a download href="{{$document->document->getFile('file_en')}}"><i class="bi bi-file-earmark-pdf"></i></a>
+                                @endif
                             </div>
                         </div>
                     </div>

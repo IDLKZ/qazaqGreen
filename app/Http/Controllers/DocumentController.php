@@ -58,7 +58,9 @@ class DocumentController extends AppBaseController
     {
         $input = $request->all();
         $document = $this->documentRepository->create($input);
-        $document->uploadFile($request["file"],"file");
+        $document->uploadFile($request["file_kz"],"file_kz");
+        $document->uploadFile($request["file_ru"],"file_ru");
+        $document->uploadFile($request["file_en"],"file_en");
         if($request->get("category")){if($document->categoryDocuments){foreach ($document->categoryDocuments as $docs){$docs->delete();}}foreach ($request->get("category") as $category){CategoryDocumentRel::add(["category_id"=>$category,"document_id"=>$document->id]);}}
 
         Flash::success('Документ успешно сохранен.');
@@ -120,7 +122,9 @@ class DocumentController extends AppBaseController
             'title_ru' => 'required|string|max:255',
             'title_kz' => 'nullable|string|max:255',
             'title_en' => 'nullable|string|max:255',
-            'file' => 'sometimes|file|max:100000',
+            'file_ru' => 'sometimes|file|max:100000',
+            'file_kz' => 'sometimes|file|max:100000',
+            'file_en' => 'sometimes|file|max:100000',
             'created_at' => 'nullable',
             'updated_at' => 'nullable'
         ]);
@@ -133,8 +137,14 @@ class DocumentController extends AppBaseController
         }
 
         $document = $this->documentRepository->update($request->all(), $id);
-        if ($request['file']){
-            $document->uploadFile($request["file"],"file");
+        if ($request['file_ru']){
+            $document->uploadFile($request["file_ru"],"file_ru");
+        }
+        if ($request['file_kz']){
+            $document->uploadFile($request["file_kz"],"file_kz");
+        }
+        if ($request['file_en']){
+            $document->uploadFile($request["file_en"],"file_en");
         }
 
         if($request->get("category")){if($document->categoryDocuments){foreach ($document->categoryDocuments as $docs){$docs->delete();}}foreach ($request->get("category") as $category){CategoryDocumentRel::add(["category_id"=>$category,"document_id"=>$document->id]);}}

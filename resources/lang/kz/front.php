@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'menu_main' => 'Басты',
+    'menu_main' => 'Басты бет',
     'menu_about' => 'Біз туралы',
     'menu_vek' => 'Қазақстандағы ЖЭK',
     'menu_vek_about' => 'ЖЭК саласы туралы',

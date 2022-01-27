@@ -23,6 +23,11 @@ trait Language
         return $this["position_" . LaravelLocalization::getCurrentLocale()];
     }
 
+    public function getFileAttribute()
+    {
+        return $this["file_" . LaravelLocalization::getCurrentLocale()];
+    }
+
     public function getSourceAttribute()
     {
         return $this["source_" . LaravelLocalization::getCurrentLocale()];

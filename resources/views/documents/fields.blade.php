@@ -18,8 +18,18 @@
 
 <!-- File Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('file', 'Файл:') !!}
-    {!! Form::file('file', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('file_ru', 'Файл (Ru):') !!}
+    {!! Form::file('file_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- File Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('file_kz', 'Файл (Kz) (необязательно):') !!}
+    {!! Form::file('file_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- File Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('file_en', 'Файл (En) (необязательно):') !!}
+    {!! Form::file('file_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Position Field -->

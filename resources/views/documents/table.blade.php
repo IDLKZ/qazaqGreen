@@ -15,7 +15,7 @@
                 <td>{{ $document->title_ru }}</td>
             <td>{{ $document->title_kz }}</td>
             <td>{{ $document->title_en }}</td>
-            <td><a href="{{ $document->getFile("file") }}" download="">Скачать</a></td>
+            <td><a href="{{ $document->getFile("file_ru") }}" download="">Скачать</a></td>
                 <td width="120">
                     {!! Form::open(['route' => ['documents.destroy', $document->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
