@@ -24,7 +24,14 @@
     <div class="container">
         <a class="navbar-brand d-flex" href="#">
 {{--            <div style='background: url("images/spaq_logo_RU.png") no-repeat center;background-size: contain;width: 180px;height: 72px'></div>--}}
-            <div style='width: 200px;height: 61px;background: url("{{asset('images/logo.svg')}}") no-repeat center; background-size: contain;'></div>
+            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                <div style='width: 200px;height: 75px;background: url("{{asset('images/logo_ru.svg')}}") no-repeat center; background-size: contain;'></div>
+            @elseif(LaravelLocalization::getCurrentLocale() == 'kz')
+                <div style='width: 200px;height: 75px;background: url("{{asset('images/logo_kz.svg')}}") no-repeat center; background-size: contain;'></div>
+            @else
+                <div style='width: 200px;height: 75px;background: url("{{asset('images/logo_en.svg')}}") no-repeat center; background-size: contain;'></div>
+            @endif
+
 {{--            <img src="{{asset('images/logo.png')}}" alt="Qazaq Green Logo">--}}
 {{--            <img src="{{asset('images/slogan.png')}}" alt="Qazaq Green Slogan">--}}
         </a>
