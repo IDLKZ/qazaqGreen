@@ -161,7 +161,7 @@
     $("input[data-bootstrap-switch]").each(function () {
         $(this).bootstrapSwitch('state', $(this).prop('checked'));
     });
-    let classNames = ['description_ru','description_kz','description_en'];
+    let classNames = ['description_ru','description_kz','description_en', 'name_kz', 'name_ru', 'name_en', 'position_kz', 'position_ru', 'position_en'];
     for (let i = 0; i<classNames.length;i++){
         CKEDITOR.replace(classNames[i],{
             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
@@ -180,6 +180,7 @@
                 console.error( error );
             } );
     }
+
     $(".date-start").datepicker({
         format:'dd.mm.yyyy'
     });

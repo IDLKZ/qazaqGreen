@@ -23,7 +23,7 @@ return [
     'documents' => 'Association documents',
     'journal' => 'Association Magazine',
     'join_to_association' => 'Join the association',
-    'join_message_1' => 'Examine the internal <a download href="docs.zip">documents</a> of the «Qazaq Green» Association and fill out the Membership Application Form',
+    'join_message_1' => 'Examine the internal <a download href="docs_en.zip">documents</a> of the «Qazaq Green» Association and fill out the Membership Application Form',
     'join_message_2' => 'Send the Application signed by an authorized person to info@spaq.kz',
     'join_message_3' => 'Receive «Qazaq Green» Association notification of the decision of the Board of Directors',
 
@@ -31,7 +31,7 @@ return [
     'btn_more' => 'More',
     'btn_more_ass' => 'More about the Association',
     'footer_text' => '«RES Association «Qazaq Green» <br> Association of Legal Entities',
-    'footer_address' => 'Syganak 43 str., <br> business-centre «Ansar» 010000, Nur-Sultan, <br> Republic of Kazakhstan',
+    'footer_address' => 'Syganak 43 str., business-centre «Ansar» 010000,<br> Nur-Sultan, Republic of Kazakhstan',
     'law' => 'Legislation',
     'law_materials' => 'NORMATIVE LEGAL ACTS',
     'title_journals' => 'Name of the journal/website',

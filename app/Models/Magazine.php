@@ -59,8 +59,12 @@ class Magazine extends Model
         'description_ru',
         'description_kz',
         'description_en',
-        'image',
-        'file'
+        'image_kz',
+        'image_ru',
+        'image_en',
+        'file_kz',
+        'file_ru',
+        'file_en',
     ];
 
     /**
@@ -94,8 +98,12 @@ class Magazine extends Model
         'description_ru' => 'required|string',
         'description_kz' => 'nullable|string',
         'description_en' => 'nullable|string',
-        'image' => 'required|image|max:1000000',
-        'file' => 'required|file|max:1000000',
+        'image_ru' => 'required|image|max:1000000',
+        'image_kz' => 'nullable|image|max:1000000',
+        'image_en' => 'nullable|image|max:1000000',
+        'file_ru' => 'required|file|max:1000000',
+        'file_kz' => 'nullable|file|max:1000000',
+        'file_en' => 'nullable|file|max:1000000',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

@@ -57,8 +57,21 @@ class MagazineController extends AppBaseController
         $input = $request->all();
 
         $magazine = $this->magazineRepository->create($input);
-        $magazine->uploadFile($request["image"],"image");
-        $magazine->uploadFile($request["file"],"file");
+        $magazine->uploadFile($request["image_ru"],"image_ru");
+        $magazine->uploadFile($request["file_ru"],"file_ru");
+        if ($request['image_kz']){
+            $magazine->uploadFile($request["image_kz"],"image_kz");
+        }
+        if ($request['image_en']){
+            $magazine->uploadFile($request["image_en"],"image_en");
+        }
+        if ($request['file_en']){
+            $magazine->uploadFile($request["file_en"],"file_en");
+        }
+        if ($request['file_kz']){
+            $magazine->uploadFile($request["file_kz"],"file_kz");
+        }
+
         Flash::success('Журнал успешно сохранен');
 
         return redirect(route('magazines.index'));
@@ -122,8 +135,12 @@ class MagazineController extends AppBaseController
             'description_ru' => 'required|string',
             'description_kz' => 'nullable|string',
             'description_en' => 'nullable|string',
-            'image' => 'sometimes|image|max:1000000',
-            'file' => 'sometimes|file|max:1000000',
+            'image_kz' => 'sometimes|image|max:1000000',
+            'image_ru' => 'sometimes|image|max:1000000',
+            'image_en' => 'sometimes|image|max:1000000',
+            'file_kz' => 'sometimes|file|max:1000000',
+            'file_ru' => 'sometimes|file|max:1000000',
+            'file_en' => 'sometimes|file|max:1000000',
             'created_at' => 'nullable',
             'updated_at' => 'nullable'
         ]);
@@ -136,11 +153,23 @@ class MagazineController extends AppBaseController
         }
 
         $magazine = $this->magazineRepository->update($request->all(), $id);
-        if ($request['image']){
-            $magazine->uploadFile($request["image"],"image");
+        if ($request['image_ru']){
+            $magazine->uploadFile($request["image_ru"],"image_ru");
         }
-        if ($request['file']){
-            $magazine->uploadFile($request["file"],"file");
+        if ($request['file_ru']){
+            $magazine->uploadFile($request["file_ru"],"file_ru");
+        }
+        if ($request['image_kz']){
+            $magazine->uploadFile($request["image_kz"],"image_kz");
+        }
+        if ($request['image_en']){
+            $magazine->uploadFile($request["image_en"],"image_en");
+        }
+        if ($request['file_en']){
+            $magazine->uploadFile($request["file_en"],"file_en");
+        }
+        if ($request['file_kz']){
+            $magazine->uploadFile($request["file_kz"],"file_kz");
         }
 
         Flash::success('Журнал успешно обновлен.');

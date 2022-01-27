@@ -2,17 +2,17 @@
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('Name_kz', 'ФИО (kz):') !!}
-    {!! Form::text('name_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::textarea('name_kz', null, ['class' => 'form-control']) !!}
 </div>
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('Name_ru', 'ФИО (ru):') !!}
-    {!! Form::text('name_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::textarea('name_ru', null, ['class' => 'form-control']) !!}
 </div>
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('Name_en', 'ФИО (en):') !!}
-    {!! Form::text('name_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::textarea('name_en', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Name Field -->

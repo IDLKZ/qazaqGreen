@@ -36,13 +36,33 @@
 </div>
 
 <!-- Image Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('image', 'Изображение:') !!}
-    {!! Form::file('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+<div class="form-group col-sm-12">
+    {!! Form::label('image', 'Изображение (Ru):') !!}
+    {!! Form::file('image_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- Image Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('image', 'Изображение (Kz) (необязательно):') !!}
+    {!! Form::file('image_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- Image Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('image', 'Изображение (En) (необязательно):') !!}
+    {!! Form::file('image_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- File Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('file', 'Документ:') !!}
-    {!! Form::file('file', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+<div class="form-group col-sm-12">
+    {!! Form::label('file_ru', 'Документ (Ru):') !!}
+    {!! Form::file('file_ru', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- File Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('file_kz', 'Документ (Kz) (необязательно):') !!}
+    {!! Form::file('file_kz', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+<!-- File Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('file_en', 'Документ (En) (необязательно):') !!}
+    {!! Form::file('file_en', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>

@@ -175,8 +175,8 @@
                                 <div class="swiper-in-management">
                                     <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
                                     <div class="management-content mt-3 w-75">
-                                        <h5 style="font-size: 1.2rem">{{$team->team->name}}</h5>
-                                        <p class="mt-3">{{$team->team->position}}</p>
+                                        <h5 style="font-size: 1.2rem">{!! $team->team->name !!}</h5>
+                                        <p class="mt-3">{!! $team->team->position !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -248,8 +248,16 @@
                         @foreach($journals as $journal)
                             <div class="swiper-slide">
                                 <div>
-                                    <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image')}}") no-repeat center; background-size: contain;'></div>
-                                    <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file')}}" download>{{$journal->title}}</a></p>
+                                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                        <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image_ru')}}") no-repeat center; background-size: contain;'></div>
+                                        <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file_ru')}}" download>{{$journal->title}}</a></p>
+                                    @elseif(LaravelLocalization::getCurrentLocale() == 'kz')
+                                        <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image_kz')}}") no-repeat center; background-size: contain;'></div>
+                                        <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file_kz')}}" download>{{$journal->title}}</a></p>
+                                    @else
+                                        <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image_en')}}") no-repeat center; background-size: contain;'></div>
+                                        <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file_en')}}" download>{{$journal->title}}</a></p>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach
