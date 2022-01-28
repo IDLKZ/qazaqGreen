@@ -14,17 +14,21 @@
                 @if($sliders)
                     <!-- Slides -->
                         <div class="swiper-slide position-relative">
-{{--                            <div style="width: 100%;height: 100%;background: url('images/back.jpg') no-repeat center;background-size: contain"></div>--}}
-                            <img src="images/back.jpg" style="width: 100%;height:100%;filter: brightness(50%);">
+                            <div style="width: 100%;height: 100%;background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/main_back.png') no-repeat center;background-size: cover"></div>
+{{--                            <img src="images/back.jpg" style="width: 100%;height:100%;filter: brightness(50%);">--}}
+{{--                            <img src="{{asset('images/main_back.png')}}" style="width: 100%;height:100%;filter: brightness(50%);">--}}
                             <h2 class="crs-title">{{__('front.slider_const')}}</h2>
                         </div>
                         @foreach($sliders as $slider)
                             <div class="swiper-slide position-relative">
-                                <img src="{{$slider->getFile('image')}}" style="width: 100%;filter: brightness(50%);">
+                                <div style='background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{$slider->getFile('image')}}") no-repeat center; background-size: cover; width: 100%; height: 100%'></div>
+{{--                                <img src="{{$slider->getFile('image')}}" style="width: 100%;filter: brightness(50%);">--}}
                                 <h2 class="crs-title">
                                     <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
+                                    <br>
+                                    <br>
+                                    <a href="{{route('front-single-new', $slider->slug)}}" class="crs-btn-2 btn">{{__('front.btn_more')}} →</a>
                                 </h2>
-                                <a href="{{route('front-single-new', $slider->slug)}}" class="crs-btn btn">{!! __('front.btn_more') !!} &#8594;</a>
                             </div>
                         @endforeach
                     @else

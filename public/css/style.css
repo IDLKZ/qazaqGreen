@@ -93,6 +93,11 @@ nav a {cursor: pointer;font-weight: 500;color: #4E5053!important;}
     padding: 0.7rem 1.5rem;
     color: white!important;
 }
+.crs-btn-2 {
+    border: 1px solid white;
+    padding: 0.7rem 1.5rem;
+    color: white!important;
+}
 #carousel > .swiper {
     height: 800px;
 }
