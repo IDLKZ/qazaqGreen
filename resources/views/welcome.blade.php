@@ -14,7 +14,7 @@
                 @if($sliders)
                     <!-- Slides -->
                         <div class="swiper-slide position-relative">
-                            <div style="width: 100%;height: 100%;background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/main_back.png') no-repeat center;background-size: cover"></div>
+                            <div style="width: 100%;height: 100%;background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('/images/main_back.png') no-repeat center;background-size: cover"></div>
 {{--                            <img src="images/back.jpg" style="width: 100%;height:100%;filter: brightness(50%);">--}}
 {{--                            <img src="{{asset('images/main_back.png')}}" style="width: 100%;height:100%;filter: brightness(50%);">--}}
                             <h2 class="crs-title">{{__('front.slider_const')}}</h2>
