@@ -98,7 +98,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-in-management">
                                     <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
-                                    <div class="management-content mt-3 w-75">
+                                    <div class="management-content mt-3">
                                         <h5>{!! $team->team->name !!}</h5>
                                         <p>{!! $team->team->position !!}</p>
                                     </div>
@@ -174,7 +174,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-in-management">
                                     <div class="management-img" style='background: url("{{$team->team->getFile('image')}}") no-repeat center;background-size: contain'></div>
-                                    <div class="management-content mt-3 w-75">
+                                    <div class="management-content mt-3">
                                         <h5>{!! $team->team->name !!}</h5>
                                         <p>{!! $team->team->position !!}</p>
                                     </div>
