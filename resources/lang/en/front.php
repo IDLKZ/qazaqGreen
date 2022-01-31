@@ -31,7 +31,7 @@ return [
     'btn_more' => 'More',
     'btn_more_ass' => 'More about the Association',
     'footer_text' => '«RES Association «Qazaq Green» <br> Association of Legal Entities',
-    'footer_address' => 'Syganak 43 str., <br> business-centre «Ansar» 010000,<br> Nur-Sultan, Republic of Kazakhstan',
+    'footer_address' => 'Syganak 43 str., <br> business-centre «Ansar», 010000,<br> Nur-Sultan, Republic of Kazakhstan',
     'law' => 'Legislation',
     'law_materials' => 'NORMATIVE LEGAL ACTS',
     'title_journals' => 'Name of the journal/website',
