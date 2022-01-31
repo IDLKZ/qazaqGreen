@@ -66,7 +66,7 @@ class PositionTeam extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function position()
+    public function positionName()
     {
         return $this->belongsTo(\App\Models\Position::class, 'position_id');
     }

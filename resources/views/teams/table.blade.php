@@ -4,6 +4,7 @@
         <tr>
         <th>ФИО</th>
         <th>Позиции</th>
+        <th>Должность</th>
         <th>Изображение</th>
             <th colspan="3">Действия</th>
         </tr>
@@ -12,8 +13,13 @@
         @foreach($teams as $team)
             <tr>
 {{--                <td>{{ $team->slug }}</td>--}}
-            <td>{{ $team->name_ru }}</td>
-            <td>{{ $team->position_ru }}</td>
+            <td>{!! $team->name_ru !!}</td>
+            <td>{!! $team->position_ru !!}</td>
+            <td>
+                @foreach($team->positionTeams as $pos)
+                    {{$pos->positionName->title_ru}}
+                @endforeach
+            </td>
             <td><img src="{{ $team->getFile("image") }}" width="200px"></td>
                 <td width="120">
                     {!! Form::open(['route' => ['teams.destroy', $team->id], 'method' => 'delete']) !!}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTeamRequest;
 use App\Http\Requests\UpdateTeamRequest;
 use App\Models\PositionTeam;
+use App\Models\Team;
 use App\Repositories\TeamRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ class TeamController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $teams = $this->teamRepository->all();
+        $teams = Team::with('positionTeams.positionName')->get();
 
         return view('teams.index')
             ->with('teams', $teams);

@@ -14,7 +14,7 @@ return [
     'menu_press' => 'Press Center',
     'menu_contact' => 'Contacts',
 
-    'slider_const' => 'A single platform for Kazakhstani and international players in the green energy industry',
+    'slider_const' => 'A single platform for Kazakhstan and international players in the green energy industry',
     'task' => 'Association activities / Key objectives',
     'partners' => 'Members and Accredited observers',
     'board_of_trust' => 'Board of Trustees',
@@ -31,7 +31,7 @@ return [
     'btn_more' => 'More',
     'btn_more_ass' => 'More about the Association',
     'footer_text' => '«RES Association «Qazaq Green» <br> Association of Legal Entities',
-    'footer_address' => 'Syganak 43 str., business-centre «Ansar» 010000,<br> Nur-Sultan, Republic of Kazakhstan',
+    'footer_address' => 'Syganak 43 str., <br> business-centre «Ansar» 010000,<br> Nur-Sultan, Republic of Kazakhstan',
     'law' => 'Legislation',
     'law_materials' => 'NORMATIVE LEGAL ACTS',
     'title_journals' => 'Name of the journal/website',

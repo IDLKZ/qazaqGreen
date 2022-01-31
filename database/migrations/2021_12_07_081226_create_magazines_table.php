@@ -22,8 +22,12 @@ class CreateMagazinesTable extends Migration
             $table->text("description_ru");
             $table->text("description_kz")->nullable();
             $table->text("description_en")->nullable();
-            $table->string("image");
-            $table->string("file");
+            $table->string("image_ru");
+            $table->string("image_kz")->nullable();
+            $table->string("image_en")->nullable();
+            $table->string("file_ru");
+            $table->string("file_kz")->nullable();
+            $table->string("file_en")->nullable();
             $table->timestamps();
         });
     }
