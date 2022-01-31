@@ -21,7 +21,7 @@
                         </div>
                         @foreach($sliders as $slider)
                             <div class="swiper-slide position-relative">
-                                <div style='background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{$slider->getFile('image')}}") no-repeat center; background-size: cover; width: 100%; height: 100%'></div>
+                                <div style='background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url("{{$slider->getFile('image')}}") no-repeat center; background-size: cover; width: 100%; height: 100%'></div>
 {{--                                <img src="{{$slider->getFile('image')}}" style="width: 100%;filter: brightness(50%);">--}}
                                 <h2 class="crs-title">
                                     <a class="text-white text-decoration-none" href="{{route('front-single-new', $slider->slug)}}">{{$slider->title}}</a>
