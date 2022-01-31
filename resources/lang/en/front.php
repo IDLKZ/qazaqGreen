@@ -16,7 +16,7 @@ return [
 
     'slider_const' => 'A single platform for Kazakhstan and international players in the green energy industry',
     'task' => 'Association activities / Key objectives',
-    'partners' => 'Members and Accredited observers',
+    'partners' => 'Members and Accredited observers, partners',
     'board_of_trust' => 'Board of Trustees',
     'board_of_director' => 'Board of Directors',
     'management' => 'Management',
