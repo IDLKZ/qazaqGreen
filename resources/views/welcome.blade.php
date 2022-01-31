@@ -128,7 +128,7 @@
                     @if($partners)
                         @foreach($partners as $partner)
                             <div class="swiper-slide">
-                                <div class="swiper-in-slide" style='background: url("{{$partner->getFile('image')}}") no-repeat center; background-size: contain;'></div>
+                                <div class="swiper-in-slide" style='background: url("{{$partner->getFile('image')}}") no-repeat center; background-size: contain;margin: auto'></div>
                             </div>
                         @endforeach
                     @else
@@ -251,7 +251,7 @@
                     @if($journals)
                         @foreach($journals as $journal)
                             <div class="swiper-slide">
-                                <div>
+                                <div class="m-auto">
                                     @if(LaravelLocalization::getCurrentLocale() == 'ru')
                                         <div class="swiper-in-journal" style='background: url("{{$journal->getFile('image_ru')}}") no-repeat center; background-size: contain;'></div>
                                         <p class="mt-3 text-center"><a class="border-0" target="_blank" href="{{$journal->getFile('file_ru')}}" download>{{$journal->title}}</a></p>
