@@ -81,7 +81,7 @@ class FrontController extends Controller
 
     public function event()
     {
-        $news = Event::paginate(8);
+        $news = Event::latest()->paginate(8);
         return view('event', compact('news'));
     }
 

@@ -37,4 +37,8 @@
         @endforeach
         </tbody>
     </table>
+
+    <div class="p-4">
+        {!! $events->links() !!}
+    </div>
 </div>
