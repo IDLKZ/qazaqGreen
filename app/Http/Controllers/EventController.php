@@ -30,7 +30,7 @@ class EventController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $events = Event::latest()->paginate(10);
+        $events = Event::orderBy('date_start', 'desc')->paginate(10);
 
         return view('events.index')
             ->with('events', $events);
