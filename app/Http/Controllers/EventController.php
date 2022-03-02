@@ -33,7 +33,7 @@ class EventController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $events = Event::orderBy(DB::raw("DATE_FORMAT(date_start,'%d.%M.%Y')"), 'desc')->paginate(10);
+        $events = Event::orderByRaw("STR_TO_DATE(date_start, '%d. %m. %Y') desc")->paginate(10);
 
         return view('events.index')
             ->with('events', $events);
