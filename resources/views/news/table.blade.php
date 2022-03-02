@@ -9,20 +9,20 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($news as $news)
+        @foreach($news as $new)
             <tr>
-                <td>{{ $news->slug }}</td>
-            <td>{{ $news->title_ru }}</td>
-            <td>{{ $news->title_kz }}</td>
-            <td>{{ $news->title_en }}</td>
+                <td>{{ $new->slug }}</td>
+            <td>{{ $new->title_ru }}</td>
+            <td>{{ $new->title_kz }}</td>
+            <td>{{ $new->title_en }}</td>
                 <td width="120">
-                    {!! Form::open(['route' => ['news.destroy', $news->id], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['news.destroy', $new->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('news.show', [$news->id]) }}"
+                        <a href="{{ route('news.show', [$new->id]) }}"
                            class='btn btn-default btn-xs'>
                             <i class="far fa-eye"></i>
                         </a>
-                        <a href="{{ route('news.edit', [$news->id]) }}"
+                        <a href="{{ route('news.edit', [$new->id]) }}"
                            class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
@@ -32,6 +32,11 @@
                 </td>
             </tr>
         @endforeach
+
         </tbody>
     </table>
+    <div class="p-4">
+        {!! $news->links() !!}
+    </div>
+
 </div>

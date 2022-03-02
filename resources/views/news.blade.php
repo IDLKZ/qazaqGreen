@@ -10,7 +10,7 @@
             @if($news)
                 @foreach($news as $new)
                     <div class="col-md-3 col-sm-12">
-                        <div class="news-img" style='background: url("{{$new->getFile('image')}}") no-repeat center; background-size: cover'></div>
+                        <div class="news-img" style='background: url("{{$new->getFile('thumbnail')}}") no-repeat center; background-size: cover'></div>
 
                         <div class="news-title my-3">
                             <a href="{{route('front-single-new', $new->slug)}}">{{\Illuminate\Support\Str::limit($new->title, 50)}}</a>

@@ -57,7 +57,7 @@ class FrontController extends Controller
 
     public function news()
     {
-        $news = News::paginate(8);
+        $news = News::latest()->paginate(8);
         return view('news', compact('news'));
     }
 

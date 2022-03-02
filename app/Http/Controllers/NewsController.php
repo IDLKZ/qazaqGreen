@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateNewsRequest;
 use App\Http\Requests\UpdateNewsRequest;
+use App\Models\News;
 use App\Repositories\NewsRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class NewsController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $news = $this->newsRepository->all();
+        $news = News::latest()->paginate(10);
 
         return view('news.index')
             ->with('news', $news);
