@@ -15,6 +15,7 @@ use App\Models\PositionTeam;
 use App\Models\Slider;
 use App\Models\Task;
 use App\Models\Team;
+use Illuminate\Support\Facades\DB;
 
 class FrontController extends Controller
 {
@@ -81,7 +82,7 @@ class FrontController extends Controller
 
     public function event()
     {
-        $news = Event::orderBy('date_start', 'desc')->paginate(8);
+        $news = Event::orderBy(DB::raw("DATE_FORMAT(date_start,'%d.%M.%Y')"), 'DESC')->paginate(10);
         return view('event', compact('news'));
     }
 

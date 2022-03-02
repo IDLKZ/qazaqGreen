@@ -7,8 +7,11 @@ use App\Http\Requests\UpdateEventRequest;
 use App\Models\Event;
 use App\Repositories\EventRepository;
 use App\Http\Controllers\AppBaseController;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Response;
 
 class EventController extends AppBaseController
@@ -30,7 +33,7 @@ class EventController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $events = Event::orderBy('date_start', 'desc')->paginate(10);
+        $events = Event::orderBy(DB::raw("DATE_FORMAT(date_start,'%d.%M.%Y')"), 'DESC')->paginate(10);
 
         return view('events.index')
             ->with('events', $events);
