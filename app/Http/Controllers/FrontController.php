@@ -82,7 +82,7 @@ class FrontController extends Controller
 
     public function event()
     {
-        $news = Event::orderBy(DB::raw("DATE_FORMAT(date_start,'%d.%M.%Y')"), 'DESC')->paginate(10);
+        $news = Event::orderBy(DB::raw("DATE_FORMAT(date_start,'%d.%M.%Y')"), 'desc')->paginate(10);
         return view('event', compact('news'));
     }
 
