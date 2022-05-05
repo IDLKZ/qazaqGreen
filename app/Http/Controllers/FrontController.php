@@ -25,7 +25,7 @@ class FrontController extends Controller
         $tasks = Task::all();
         $partners = Partner::all();
         $teams = PositionTeam::with('team')->where('position_id', 1)->get();
-        $journals = Magazine::all();
+        $journals = Magazine::latest()->get();
         return view('welcome', compact('sliders', 'tasks', 'partners', 'teams', 'journals'));
     }
 
