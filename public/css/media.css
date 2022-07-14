@@ -50,3 +50,10 @@
 @media only screen and (min-height: 1000px) {
     .crs-btn {top: calc(100vh*0.6)}
 }
+
+@media only screen and (min-width: 1440px) {
+    .nav-item {
+        margin-right: calc(100vw*0.025);
+    }
+}
+
