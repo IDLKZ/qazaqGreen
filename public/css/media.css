@@ -44,7 +44,7 @@
         padding-right: var(--bs-gutter-x,1rem);
         padding-left: var(--bs-gutter-x,1rem);
     }
-    .nav-item {margin-right: calc(100vw*0.025);}
+    .nav-item {margin-right: calc(100vw*0.005);}
 }
 
 @media only screen and (min-height: 1000px) {
