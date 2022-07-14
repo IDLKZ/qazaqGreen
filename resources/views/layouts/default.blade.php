@@ -18,6 +18,170 @@
     <base href="/">
     @stack('css')
 </head>
+<style>
+    .bg-jk {
+        background-color: rgba(3, 140, 195, 1);
+        color: white!important;
+    }
+    .glowing-btn span{
+        position: absolute;
+        display: block;
+    }
+    .glowing-btn span:nth-child(1){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,white);
+        animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1{
+        0%{
+            left: -100%;
+        }
+        50%,100%{
+            left: 100%;
+        }
+    }
+    .glowing-btn span:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,white);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    @keyframes animate2{
+        0%{
+            top: -100%;
+        }
+        50%,100%{
+            top: 100%;
+        }
+    }
+    .glowing-btn span:nth-child(3){
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,white);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.50s;
+    }
+    @keyframes animate3{
+        0%{
+            right: -100%;
+        }
+        50%,100%{
+            right: 100%;
+        }
+    }
+
+
+    .glowing-btn span:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,white);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom: -100%;
+        }
+        50%,100%{
+            bottom: 100%;
+        }
+    }
+
+    .play-btn {
+        /*background: radial-gradient( rgba(3, 140, 195, 1) 60%, rgba(255, 255, 255, 1) %);*/
+        position: relative;
+        display: block;
+        /*border-radius: 10%;*/
+        /*margin: 100px auto;*/
+        box-shadow: 0 0 5px 1px rgba(3, 140, 195, 1);
+    }
+
+    /* triangle */
+    .play-btn::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-40%) translateY(-50%);
+        transform: translateX(-40%) translateY(-50%);
+        transform-origin: center center;
+        width: 0;
+        height: 0;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-left: 2px solid #fff;
+        z-index: 100;
+        -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    /* pulse wave */
+    .play-btn:before {
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        -webkit-animation: pulsate1 2s;
+        animation: pulsate1 2s;
+        -webkit-animation-direction: forwards;
+        animation-direction: forwards;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: steps;
+        animation-timing-function: steps;
+        opacity: 1;
+        /*border-radius: 50%;*/
+        border: 5px solid rgba(255, 255, 255, .75);
+        top: -25%;
+        left: -25%;
+        background: rgba(198, 16, 0, 0);
+    }
+
+    @-webkit-keyframes pulsate1 {
+        0% {
+            -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+            opacity: 1;
+            box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 0;
+            box-shadow: none;
+
+        }
+    }
+
+    @keyframes pulsate1 {
+        0% {
+            -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+            opacity: 1;
+            box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+        }
+        100% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1);
+            opacity: 0;
+            box-shadow: none;
+
+        }
+    }
+
+</style>
 <body>
 <!--Start Header-->
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -63,13 +227,22 @@
                     </ul>
                 </li>
                 <li class="nav-item position-relative">
-                    <a class="nav-link">{{__('front.menu_press')}}</a>
+                    <a class="nav-link" target="_blank" href="https://qazaqgreen.com/">{{__('front.menu_press')}}</a>
                 </li>
                 <li class="nav-item position-relative">
                     <a href="{{route('front-event')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/event') ? 'active' : '' }}">{{__('front.menu_event')}}</a>
                 </li>
                 <li class="nav-item position-relative">
                     <a href="{{route('front-contact')}}" class="nav-link {{ Request::is(LaravelLocalization::getCurrentLocale().'/contact') ? 'active' : '' }}">{{__('front.menu_contact')}}</a>
+                </li>
+                <li class="nav-item position-relative">
+                    <a class="btn btn-round bg-jk font-weight-bold glowing-btn play-btn" target="_blank" href="https://qazaqgreen.com/">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Qazaq Green
+                    </a>
                 </li>
             </ul>
             <ul class="navbar-nav">
